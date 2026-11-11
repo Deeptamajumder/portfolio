@@ -1,0 +1,3043 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Dr Deepta Majumder — Physician &amp; Public Health Researcher</title>
+<link href="/favicon.svg" rel="icon"/>
+<meta content="Dr. Deepta Majumder — physician, MPH epidemiologist and public health researcher. Explore research, publications, projects and ask the AI assistant anything." name="description"/>
+<style>
+:root{
+ --bg:#050609;--fg:#f5f5f7;--muted:#a5a7ad;--line:#25262b;
+ --teal:#79e8df;--pink:#f58ab8;--blue:#719bff;--orange:#ef8b57;--purple:#b88cff;--yellow:#fff338;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial,sans-serif;line-height:1.45}
+body:before{content:"";position:fixed;inset:0;z-index:-3;background:
+ radial-gradient(circle at 20% 20%,rgba(121,232,223,.10),transparent 30%),
+ radial-gradient(circle at 80% 35%,rgba(245,138,184,.09),transparent 30%),
+ radial-gradient(circle at 50% 90%,rgba(113,155,255,.08),transparent 35%)}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1160px,calc(100% - 36px));margin:auto}
+.nav{position:fixed;z-index:50;top:14px;left:50%;transform:translateX(-50%);width:min(1120px,calc(100% - 28px));height:54px;padding:0 14px 0 18px;border:1px solid #ffffff18;border-radius:999px;background:#101116b8;backdrop-filter:blur(20px);display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:-.025em}.logo span{color:#92959c;font-weight:500}
+.navlinks{display:flex;gap:5px}.navlinks a{font-size:13px;color:#d7d7da;padding:8px 12px;border-radius:999px}.navlinks a:hover{background:#ffffff0e}
+.hero{height:100vh;min-height:720px;display:grid;place-items:center;position:relative;overflow:hidden}
+.hero-content{text-align:center;position:relative;z-index:3;padding-top:40px}
+.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.18em;color:#aeb0b6;font-weight:700}
+h1{font-size:clamp(58px,10vw,150px);line-height:.84;letter-spacing:-.085em;margin:20px 0 26px}
+.hero-copy{font-size:clamp(18px,2.1vw,25px);line-height:1.35;color:#b9bbc1;max-width:800px;margin:auto}
+.meta{margin-top:24px;color:#8f939b;font-size:13px}
+.scroll-hint{margin-top:48px;color:#777a82;font-size:12px;letter-spacing:.13em;text-transform:uppercase}
+.scroll-hint:after{content:"";display:block;width:1px;height:54px;background:#65676e;margin:13px auto 0}
+.hero-orb{position:absolute;width:min(65vw,820px);height:min(65vw,820px);border-radius:50%;background:
+ radial-gradient(circle at 35% 28%,#ffffff18,transparent 16%),
+ radial-gradient(circle at 55% 60%,#79e8df18,transparent 28%),
+ radial-gradient(circle at 65% 45%,#f58ab814,transparent 26%),
+ radial-gradient(circle at center,#ffffff09,transparent 64%);
+filter:blur(1px);opacity:.9;transform:scale(.82)}
+
+/* Glass clinical animation */
+.medical-glass-scene{
+ position:absolute;
+ inset:0;
+ z-index:2;
+ pointer-events:none;
+ perspective:1200px;
+ overflow:hidden;
+}
+.medical-glass-card{
+ position:absolute;
+ border:1px solid #ffffff24;
+ background:
+   linear-gradient(145deg,#ffffff12,transparent 46%),
+   radial-gradient(circle at 82% 18%,var(--medical-glow,#79e8df)18,transparent 42%),
+   #ffffff05;
+ box-shadow:
+   0 30px 90px #0008,
+   inset 0 1px #ffffff20,
+   inset 0 -1px #0005;
+ backdrop-filter:blur(22px) saturate(135%);
+ -webkit-backdrop-filter:blur(22px) saturate(135%);
+ border-radius:34px;
+ overflow:hidden;
+ opacity:0;
+ transform-style:preserve-3d;
+}
+.medical-glass-card:before{
+ content:"";
+ position:absolute;
+ inset:-30%;
+ background:radial-gradient(circle at 50% 50%,var(--medical-glow,#79e8df)15,transparent 55%);
+ filter:blur(35px);
+ opacity:.18;
+ animation:medicalGlow 5s ease-in-out infinite alternate;
+}
+.medical-glass-card:after{
+ content:"";
+ position:absolute;
+ width:180px;height:180px;
+ border-radius:50%;
+ right:-75px;top:-85px;
+ background:var(--medical-glow,#79e8df);
+ opacity:.12;
+ filter:blur(30px);
+}
+.ecg-glass{
+ --medical-glow:#f58ab8;
+ width:430px;
+ height:245px;
+ right:2vw;
+ bottom:16%;
+ transform:translate3d(70px,20px,0) rotate(7deg);
+ animation:ecgFloat 7s ease-in-out infinite;
+ animation-delay:-2s;
+}
+.medical-glass-topline{
+ position:relative;
+ z-index:3;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ padding:18px 20px 0;
+ color:#cfd2d7;
+ font-size:9px;
+ letter-spacing:.17em;
+}
+.medical-glass-topline i{
+ display:block;
+ width:8px;height:8px;
+ border-radius:50%;
+ background:var(--medical-glow,#79e8df);
+ box-shadow:0 0 18px var(--medical-glow,#79e8df);
+}
+.medical-glass-label{
+ position:absolute;
+ z-index:4;
+ left:21px;
+ right:21px;
+ bottom:18px;
+ display:flex;
+ align-items:end;
+ justify-content:space-between;
+ gap:12px;
+}
+.medical-glass-label b{
+ font-size:20px;
+ letter-spacing:-.035em;
+ color:#f4f5f6;
+}
+.medical-glass-label span{
+ font-size:9px;
+ color:#aeb2b9;
+ letter-spacing:.05em;
+ text-align:right;
+}
+.ecg-display{
+ position:absolute;
+ left:20px;
+ right:20px;
+ top:62px;
+ height:105px;
+ border-radius:18px;
+ border:1px solid #ffffff12;
+ background:#0000001c;
+ overflow:hidden;
+ box-shadow:inset 0 1px #ffffff09;
+}
+.ecg-display svg{
+ width:100%;
+ height:100%;
+ display:block;
+}
+.ecg-grid{
+ stroke:#ffffff0b;
+ stroke-width:1;
+}
+.ecg-line{
+ fill:none;
+ stroke:url(#ecgLine);
+ stroke-width:4;
+ stroke-linecap:round;
+ stroke-linejoin:round;
+ stroke-dasharray:760;
+ stroke-dashoffset:760;
+ filter:drop-shadow(0 0 6px #79e8df66);
+ animation:ecgDraw 2.6s linear infinite;
+}
+.ecg-scan{
+ position:absolute;
+ top:0;
+ bottom:0;
+ width:90px;
+ background:linear-gradient(90deg,transparent,#ffffff0b,transparent);
+ filter:blur(4px);
+ transform:translateX(-100px);
+ animation:ecgScan 2.6s linear infinite;
+}
+@keyframes medicalGlow{
+ from{transform:translate3d(-10px,-5px,0) scale(.92);opacity:.12}
+ to{transform:translate3d(14px,12px,0) scale(1.08);opacity:.25}
+}
+ 50%{margin-top:-13px}
+}
+@keyframes ecgFloat{
+ 0%,100%{margin-bottom:0}
+ 50%{margin-bottom:13px}
+}
+@keyframes ecgDraw{
+ 0%{stroke-dashoffset:760}
+ 8%{stroke-dashoffset:650}
+ 42%{stroke-dashoffset:0}
+ 72%{stroke-dashoffset:0}
+ 100%{stroke-dashoffset:-760}
+}
+@keyframes ecgScan{
+ 0%{transform:translateX(-100px);opacity:0}
+ 15%{opacity:1}
+ 75%{opacity:.75}
+ 100%{transform:translateX(520px);opacity:0}
+}
+.hero .medical-glass-scene .medical-glass-card{
+ animation-play-state:paused;
+}
+.hero.is-ready .medical-glass-scene .hero.is-ready .medical-glass-scene .ecg-glass{
+ opacity:.78;
+ transform:translate3d(0,0,0) rotate(7deg);
+ transition:opacity 1s ease .45s,transform 1.2s cubic-bezier(.16,1,.3,1) .45s;
+ animation-play-state:running;
+}
+@media(max-width:1000px){
+  .ecg-glass{right:-110px;bottom:13%;transform:scale(.82) translate3d(70px,20px,0) rotate(7deg)}
+ .hero.is-ready .medical-glass-scene  .hero.is-ready .medical-glass-scene .ecg-glass{transform:scale(.82) translate3d(0,0,0) rotate(7deg)}
+}
+@media(max-width:650px){
+ .medical-glass-scene{opacity:.72}
+  .ecg-glass{right:-130px;bottom:12%;transform:scale(.65) translate3d(70px,20px,0) rotate(7deg)}
+ .hero.is-ready .medical-glass-scene  .hero.is-ready .medical-glass-scene .ecg-glass{transform:scale(.65) translate3d(0,0,0) rotate(7deg)}
+ .medical-glass-label span{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+ .medical-glass-card,.medical-glass-card:before,.ecg-line,.ecg-scan{animation:none!important}
+}
+.story{height:330vh;position:relative}
+.sticky{position:sticky;top:0;height:100vh;overflow:hidden}
+.story-stage{height:100%;position:relative;display:grid;place-items:center}
+.story-bg{position:absolute;inset:0;background:radial-gradient(circle at var(--gx,50%) var(--gy,50%),var(--gc,#79e8df),transparent 25%);opacity:.13;filter:blur(70px)}
+.story-device{position:absolute;width:min(74vw,760px);height:min(74vw,760px);border-radius:50%;background:radial-gradient(circle,#ffffff0b 0 25%,#ffffff03 50%,transparent 67%);border:1px solid #ffffff0b;transform:scale(.72);opacity:.7}
+.story-center{position:relative;width:min(900px,92vw);height:min(680px,82vh)}
+.portrait-card{position:absolute;inset:7% 18%;border:1px solid #ffffff1d;border-radius:42px;overflow:hidden;background:#15161b;box-shadow:0 35px 100px #00000090;transform:scale(.82);opacity:0}
+.portrait-card img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:grayscale(1);opacity:.78}
+.portrait-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0000 25%,#000d 100%)}
+.portrait-label{position:absolute;z-index:2;left:30px;right:30px;bottom:28px}
+.portrait-label b{font-size:24px}.portrait-label small{display:block;color:#aaaeb5;margin-top:5px}
+.float-card{position:absolute;width:230px;padding:18px;border:1px solid #ffffff24;border-radius:24px;background:#ffffff0d;backdrop-filter:blur(18px);box-shadow:0 20px 60px #0007;opacity:0;transform:translateY(30px) scale(.9)}
+.float-card .label{font-size:11px;color:#c8cad0}.float-card b{display:block;font-size:25px;letter-spacing:-.04em;margin-top:7px}.float-card span{display:block;color:#b7bac0;font-size:11px;margin-top:4px}
+.fc1{left:2%;top:15%;background:linear-gradient(145deg,#79e8df28,#fff1)}.fc2{right:1%;top:27%;background:linear-gradient(145deg,#f58ab828,#fff1)}.fc3{left:7%;bottom:10%;background:linear-gradient(145deg,#719bff2b,#fff1)}.fc4{right:7%;bottom:6%;background:linear-gradient(145deg,#ef8b572b,#fff1)}
+.story-copy{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(760px,86vw);text-align:center;z-index:5;pointer-events:none}
+.story-copy .step{position:absolute;inset:0;opacity:0}
+.story-copy .eyebrow,.section-kicker{font-size:11px;text-transform:uppercase;letter-spacing:.18em;color:#9ca0a8;font-weight:700}
+.story-copy h2{font-size:clamp(42px,7vw,88px);line-height:.9;letter-spacing:-.07em;margin:14px 0}
+.story-copy p{font-size:clamp(16px,1.7vw,21px);color:#b4b7be;max-width:650px;margin:auto}
+
+/* Animated floating quick-access deck */
+.quick-tabs{
+ padding:95px 0 155px;
+ position:relative;
+ overflow:hidden;
+ min-height:760px;
+ background:
+   radial-gradient(circle at 74% 42%,#79e8df0a,transparent 28%),
+   radial-gradient(circle at 85% 65%,#f58ab80a,transparent 30%);
+}
+.quick-tabs-wrap{
+ display:grid;
+ grid-template-columns:.78fr 1.22fr;
+ gap:26px;
+ align-items:center;
+ min-height:620px;
+}
+.tab-intro{
+ padding:10px 0;
+ position:relative;
+ z-index:5;
+ opacity:0;
+ transform:translateX(-55px);
+ transition:opacity .9s ease,transform 1s cubic-bezier(.16,1,.3,1);
+}
+.quick-tabs.is-visible .tab-intro{opacity:1;transform:none}
+.tab-intro .section-kicker{
+ margin-bottom:18px;
+ position:relative;
+ padding-left:0;
+}
+.tab-intro .section-kicker:after{
+ content:"";
+ display:block;
+ width:1px;
+ height:72px;
+ background:linear-gradient(#a8abb1,#a8abb100);
+ margin:16px 0 0 4px;
+ transform:scaleY(0);
+ transform-origin:top;
+ transition:transform .8s cubic-bezier(.16,1,.3,1) .25s;
+}
+.quick-tabs.is-visible .tab-intro .section-kicker:after{transform:scaleY(1)}
+.tab-intro h2{
+ font-size:clamp(44px,5.7vw,78px);
+ line-height:.86;
+ letter-spacing:-.075em;
+ margin:0 0 22px;
+ max-width:500px;
+}
+.tab-intro p{
+ color:#aeb1b8;
+ max-width:500px;
+ font-size:17px;
+ line-height:1.45;
+}
+
+.tab-deck{
+ height:600px;
+ position:relative;
+ perspective:1500px;
+ transform-style:preserve-3d;
+}
+.tab-deck:before{
+ content:"";
+ position:absolute;
+ width:620px;
+ height:500px;
+ left:52%;
+ top:51%;
+ transform:translate(-50%,-50%);
+ background:
+   radial-gradient(circle at 55% 38%,#79e8df16,transparent 25%),
+   radial-gradient(circle at 72% 63%,#f58ab815,transparent 27%),
+   radial-gradient(circle at 48% 75%,#719bff13,transparent 25%);
+ filter:blur(32px);
+ pointer-events:none;
+}
+.quick-tab{
+ position:absolute;
+ width:min(540px,92%);
+ height:185px;
+ border:1px solid #ffffff25;
+ border-radius:35px;
+ padding:27px 29px;
+ display:flex;
+ align-items:flex-start;
+ justify-content:space-between;
+ color:#fff;
+ text-align:left;
+ text-decoration:none;
+ box-shadow:0 32px 95px #000a,inset 0 1px #ffffff12;
+ backdrop-filter:blur(24px) saturate(135%);
+ -webkit-backdrop-filter:blur(24px) saturate(135%);
+ overflow:hidden;
+ cursor:pointer;
+ isolation:isolate;
+ will-change:transform,opacity;
+ opacity:0;
+ transform:translate3d(0,110px,0) scale(.72) rotate(0deg);
+ transition:
+   transform 1.1s cubic-bezier(.16,1,.3,1),
+   opacity .7s ease,
+   filter .45s ease,
+   box-shadow .45s ease;
+}
+.quick-tab:before{
+ content:"";
+ position:absolute;
+ inset:0;
+ background:
+   linear-gradient(120deg,#ffffff14,transparent 40%),
+   radial-gradient(circle at 72% 25%,var(--tab-glow,#79e8df)35,transparent 36%);
+ opacity:.9;
+ filter:blur(2px);
+ z-index:-1;
+}
+.quick-tab:after{
+ content:"";
+ position:absolute;
+ width:210px;
+ height:210px;
+ border-radius:50%;
+ right:-80px;
+ bottom:-125px;
+ background:var(--tab-glow,#79e8df);
+ opacity:.34;
+ filter:blur(28px);
+ z-index:-1;
+}
+.quick-tab .tab-label{position:relative;z-index:2}
+.quick-tab .mini{
+ font-size:10px;
+ color:#d8dbe0;
+ text-transform:uppercase;
+ letter-spacing:.16em;
+ font-weight:650;
+}
+.quick-tab h3{
+ font-size:clamp(30px,3.7vw,49px);
+ line-height:.9;
+ letter-spacing:-.065em;
+ margin:13px 0 0;
+ font-weight:760;
+}
+.quick-tab .arrow{
+ position:relative;
+ z-index:2;
+ width:59px;
+ height:59px;
+ border-radius:50%;
+ display:grid;
+ place-items:center;
+ background:#fff;
+ color:#111;
+ font-size:26px;
+ flex:0 0 auto;
+ box-shadow:0 8px 26px #0004;
+ transition:transform .4s cubic-bezier(.16,1,.3,1);
+}
+.quick-tab:hover{
+ filter:brightness(1.1) saturate(1.08);
+ box-shadow:0 42px 115px #000c,inset 0 1px #ffffff20;
+}
+.quick-tab:hover .arrow{transform:rotate(8deg) scale(1.06)}
+
+.qt1{--tab-glow:#79e8df;left:0;top:5%}
+.qt2{--tab-glow:#f58ab8;left:24%;top:22%}
+.qt3{--tab-glow:#719bff;left:8%;top:49%}
+.qt4{--tab-glow:#fff338;left:21%;top:69%}
+
+.quick-tabs.is-visible .qt1{
+ opacity:1;
+ transform:translate3d(0,0,40px) rotate(-4deg) scale(1);
+ transition-delay:.08s;
+}
+.quick-tabs.is-visible .qt2{
+ opacity:1;
+ transform:translate3d(62px,0,25px) rotate(3deg) scale(1);
+ transition-delay:.20s;
+}
+.quick-tabs.is-visible .qt3{
+ opacity:1;
+ transform:translate3d(8px,0,10px) rotate(2deg) scale(1);
+ transition-delay:.32s;
+}
+.quick-tabs.is-visible .qt4{
+ opacity:1;
+ transform:translate3d(48px,0,0) rotate(-3deg) scale(1);
+ transition-delay:.44s;
+}
+
+/* Continuous pointer parallax */
+.quick-tabs.is-active .qt1{
+ transform:translate3d(calc(var(--mx) * .50),calc(var(--my) * .42),40px) rotate(-4deg) scale(1);
+}
+.quick-tabs.is-active .qt2{
+ transform:translate3d(calc(62px + var(--mx) * .82),calc(var(--my) * .68),25px) rotate(3deg) scale(1);
+}
+.quick-tabs.is-active .qt3{
+ transform:translate3d(calc(8px + var(--mx) * .66),calc(var(--my) * .88),10px) rotate(2deg) scale(1);
+}
+.quick-tabs.is-active .qt4{
+ transform:translate3d(calc(48px + var(--mx) * 1.0),calc(var(--my) * 1.08),0) rotate(-3deg) scale(1);
+}
+
+@media(max-width:900px){
+ .quick-tabs{padding:65px 0 115px;min-height:900px}
+ .quick-tabs-wrap{grid-template-columns:1fr;min-height:820px}
+ .tab-deck{height:590px;margin-top:-15px}
+ .quick-tab{width:94%;height:154px;padding:22px}
+ .quick-tab h3{font-size:34px}
+ .quick-tab .arrow{width:50px;height:50px}
+ .qt1{left:0}.qt2{left:7%}.qt3{left:0}.qt4{left:7%}
+ .quick-tabs.is-visible .qt2{transform:translate3d(24px,0,25px) rotate(3deg) scale(1)}
+ .quick-tabs.is-visible .qt4{transform:translate3d(24px,0,0) rotate(-3deg) scale(1)}
+ .quick-tabs.is-active .qt2{transform:translate3d(calc(24px + var(--mx) * .55),var(--my),25px) rotate(3deg) scale(1)}
+ .quick-tabs.is-active .qt4{transform:translate3d(calc(24px + var(--mx) * .7),var(--my),0) rotate(-3deg) scale(1)}
+}
+@media(prefers-reduced-motion:reduce){
+ .quick-tab,.tab-intro,.tab-intro .section-kicker:after{transition:none!important}
+}
+
+/* Personal amateur radio image */
+.radio-hero-single{display:block;margin-top:52px}
+.radio-photo-large{min-height:650px;width:100%;max-width:1180px;margin:0 auto}
+.radio-photo-large img{object-position:center 52%}
+.radio-photo-large:after{background:linear-gradient(180deg,#0000 35%,#000d 100%)}
+.radio-photo-large .radio-caption{max-width:760px}
+.radio-photo-large .radio-caption h3{font-size:clamp(38px,5.2vw,72px)}
+@media(max-width:800px){
+ .radio-photo-large{min-height:520px}
+ .radio-photo-large .radio-caption h3{font-size:38px}
+}
+
+/* Dedicated research project cards */
+.research-projects{
+ padding:150px 0;
+ position:relative;
+ overflow:hidden;
+}
+.research-project-grid{
+ display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:12px;
+ margin-top:54px;
+}
+.research-project-card{
+ position:relative;
+ min-height:390px;
+ padding:30px;
+ border:1px solid #ffffff18;
+ border-radius:30px;
+ background:
+   linear-gradient(145deg,#ffffff09,transparent 45%),
+   radial-gradient(circle at 88% 8%,var(--project-glow,#79e8df)18,transparent 36%),
+   #ffffff04;
+ box-shadow:0 28px 80px #0005,inset 0 1px #ffffff10;
+ overflow:hidden;
+ transition:transform .5s cubic-bezier(.16,1,.3,1),border-color .4s ease,box-shadow .5s ease;
+}
+.research-project-card:before{
+ content:"";
+ position:absolute;
+ width:190px;height:190px;
+ right:-90px;bottom:-90px;
+ border-radius:50%;
+ background:var(--project-glow,#79e8df);
+ opacity:.18;
+ filter:blur(30px);
+ pointer-events:none;
+}
+.research-project-card:hover{
+ transform:translateY(-7px);
+ border-color:#ffffff2b;
+ box-shadow:0 38px 100px #0008,inset 0 1px #ffffff14;
+}
+.research-project-card .project-index{
+ font-size:10px;
+ letter-spacing:.17em;
+ text-transform:uppercase;
+ color:#aeb3bb;
+ margin-bottom:22px;
+}
+.research-project-card h3{
+ font-size:clamp(25px,2.7vw,37px);
+ line-height:.98;
+ letter-spacing:-.055em;
+ max-width:620px;
+ margin:0 0 22px;
+}
+.project-meta{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:8px;
+ margin-bottom:22px;
+}
+.project-meta-item{
+ padding:12px 13px;
+ border:1px solid #ffffff12;
+ border-radius:16px;
+ background:#00000018;
+}
+.project-meta-item span{
+ display:block;
+ font-size:9px;
+ text-transform:uppercase;
+ letter-spacing:.14em;
+ color:#7f858e;
+ margin-bottom:5px;
+}
+.project-meta-item b{
+ display:block;
+ font-size:12px;
+ line-height:1.3;
+ color:#e0e2e6;
+ font-weight:600;
+}
+.research-project-card .project-description{
+ color:#aeb2ba;
+ font-size:14px;
+ line-height:1.55;
+ max-width:680px;
+ margin:0;
+}
+.role-badge{
+ display:inline-flex;
+ align-items:center;
+ padding:7px 11px;
+ border-radius:999px;
+ background:#ffffff0b;
+ border:1px solid #ffffff17;
+ color:#f2f3f5;
+ font-size:10px;
+ text-transform:uppercase;
+ letter-spacing:.11em;
+ margin-bottom:17px;
+}
+@media(max-width:850px){
+ .research-projects{padding:110px 0}
+ .research-project-grid{grid-template-columns:1fr}
+ .research-project-card{min-height:auto}
+}
+
+/* Animated power-style AI assistant toggle inspired by the supplied reference */
+.hero-toggle-row{
+ margin-top:28px;
+ display:flex;
+ align-items:center;
+}
+.power-toggle{
+ display:inline-flex;
+ align-items:center;
+ gap:14px;
+ cursor:pointer;
+ user-select:none;
+}
+.power-toggle input{
+ position:absolute;
+ opacity:0;
+ pointer-events:none;
+}
+.toggle-track{
+ position:relative;
+ width:154px;
+ height:68px;
+ border:1px solid #ffffff22;
+ border-radius:999px;
+ background:#17191d;
+ box-shadow:
+   inset 0 2px 8px #000b,
+   0 12px 35px #0008;
+ overflow:hidden;
+ transition:background .55s ease,border-color .55s ease,box-shadow .55s ease;
+}
+.toggle-track:before{
+ content:"";
+ position:absolute;
+ left:5px;
+ top:5px;
+ width:58px;
+ height:58px;
+ border-radius:50%;
+ background:radial-gradient(circle at 38% 38%,#ffffff22,#0000 34%),#272a2f;
+ box-shadow:inset 0 2px 4px #ffffff14,0 4px 12px #0009;
+ transition:transform .65s cubic-bezier(.16,1,.3,1),background .55s ease,box-shadow .55s ease;
+}
+.toggle-track:after{
+ content:"";
+ position:absolute;
+ left:48px;
+ top:0;
+ width:70px;
+ height:68px;
+ background:radial-gradient(circle,#ff8a1d55 0,#ff8a1d22 34%,transparent 68%);
+ opacity:0;
+ filter:blur(5px);
+ transition:opacity .35s ease,transform .65s cubic-bezier(.16,1,.3,1);
+}
+.toggle-state{
+ position:absolute;
+ z-index:2;
+ left:20px;
+ top:24px;
+ font-size:13px;
+ line-height:1;
+ font-weight:700;
+ letter-spacing:.08em;
+ color:#d4d7db;
+ transition:opacity .25s ease,transform .55s ease;
+}
+.toggle-thumb{
+ position:absolute;
+ z-index:3;
+ left:7px;
+ top:7px;
+ width:54px;
+ height:54px;
+ border-radius:50%;
+ background:linear-gradient(145deg,#24272c,#101114);
+ box-shadow:inset 0 1px #ffffff16,0 7px 18px #000b;
+ transition:transform .65s cubic-bezier(.16,1,.3,1),background .55s ease,box-shadow .55s ease;
+}
+.toggle-thumb:after{
+ content:"";
+ position:absolute;
+ inset:8px;
+ border-radius:50%;
+ border:1px solid #ffffff0d;
+}
+.power-toggle input:checked + .toggle-track{
+ background:linear-gradient(90deg,#17191d 0%,#1c1a18 22%,#5b2a0f 44%,#ef6f16 63%,#f07a23 100%);
+ border-color:#ff9b4b55;
+ box-shadow:
+   inset 0 2px 8px #0009,
+   0 12px 40px #0009,
+   0 0 32px #ff6f1d1c;
+}
+.power-toggle input:checked + .toggle-track:before{
+ transform:translateX(86px);
+ background:radial-gradient(circle at 35% 30%,#fff8,#0000 31%),linear-gradient(145deg,#ff9b55,#e95d0b);
+ box-shadow:inset 0 2px 5px #fff5,0 5px 18px #ff671888;
+}
+.power-toggle input:checked + .toggle-track:after{
+ opacity:1;
+ transform:translateX(35px);
+}
+.power-toggle input:checked + .toggle-track .toggle-state{
+ opacity:1;
+ transform:translateX(86px);
+ color:#fff;
+}
+.power-toggle input:checked + .toggle-track .toggle-thumb{
+ transform:translateX(86px);
+ background:linear-gradient(145deg,#ffb071,#e85d0c);
+ box-shadow:inset 0 1px #fff7,0 6px 22px #ff681c99;
+}
+.toggle-copy{
+ display:flex;
+ flex-direction:column;
+ gap:4px;
+}
+.toggle-copy b{
+ font-size:13px;
+ letter-spacing:.02em;
+ color:#f2f3f5;
+}
+.toggle-copy small{
+ font-size:11px;
+ color:#858a92;
+ max-width:210px;
+ line-height:1.3;
+}
+.power-toggle:hover .toggle-track{
+ border-color:#ffffff36;
+}
+@media(max-width:650px){
+ .hero-toggle-row{margin-top:24px}
+ .toggle-track{width:136px;height:60px}
+ .toggle-track:before{width:50px;height:50px}
+ .toggle-thumb{width:46px;height:46px}
+ .power-toggle input:checked + .toggle-track:before,
+ .power-toggle input:checked + .toggle-track .toggle-thumb,
+ .power-toggle input:checked + .toggle-track .toggle-state{
+   transform:translateX(76px);
+ }
+ .toggle-track:after{height:60px}
+}
+
+/* Colourful live daily dashboard */
+.daily-dashboard{
+ padding:115px 0 135px;
+ position:relative;
+ overflow:hidden;
+ background:
+   radial-gradient(circle at 15% 28%,#79e8df0c,transparent 26%),
+   radial-gradient(circle at 82% 32%,#719bff0d,transparent 28%),
+   radial-gradient(circle at 55% 85%,#f58ab80b,transparent 25%);
+}
+.daily-dashboard:before{
+ content:"";
+ position:absolute;
+ width:620px;height:620px;
+ left:50%;top:48%;
+ transform:translate(-50%,-50%);
+ border-radius:50%;
+ background:conic-gradient(from 120deg,#79e8df12,#f58ab812,#719bff12,#fff3380d,#79e8df12);
+ filter:blur(80px);
+ pointer-events:none;
+ animation:dashboardAura 14s linear infinite;
+}
+.dashboard-head{
+ display:flex;
+ align-items:flex-end;
+ justify-content:space-between;
+ gap:30px;
+ position:relative;
+ z-index:2;
+}
+.dashboard-head h2{
+ font-size:clamp(45px,6vw,82px);
+ line-height:.86;
+ letter-spacing:-.075em;
+ margin:14px 0 0;
+}
+.dashboard-head p{
+ max-width:420px;
+ color:#9fa3aa;
+ line-height:1.5;
+ font-size:14px;
+}
+.dashboard-grid{
+ position:relative;
+ z-index:2;
+ display:grid;
+ grid-template-columns:1.18fr .82fr .82fr;
+ grid-template-rows:245px 245px;
+ gap:12px;
+ margin-top:48px;
+}
+.live-card{
+ position:relative;
+ overflow:hidden;
+ border:1px solid #ffffff20;
+ border-radius:30px;
+ padding:24px;
+ background:#ffffff07;
+ box-shadow:0 28px 85px #0008,inset 0 1px #ffffff12;
+ backdrop-filter:blur(22px) saturate(135%);
+ -webkit-backdrop-filter:blur(22px) saturate(135%);
+ isolation:isolate;
+ opacity:0;
+ transform:translateY(34px) scale(.97);
+ transition:opacity .8s ease,transform .9s cubic-bezier(.16,1,.3,1),border-color .35s ease;
+}
+.daily-dashboard.is-visible .live-card{opacity:1;transform:none}
+.daily-dashboard.is-visible .live-card:nth-child(2){transition-delay:.08s}
+.daily-dashboard.is-visible .live-card:nth-child(3){transition-delay:.16s}
+.daily-dashboard.is-visible .live-card:nth-child(4){transition-delay:.24s}
+.daily-dashboard.is-visible .live-card:nth-child(5){transition-delay:.32s}
+.live-card:hover{border-color:#ffffff34;transform:translateY(-5px)!important}
+.live-card:before{
+ content:"";
+ position:absolute;
+ width:220px;height:220px;
+ border-radius:50%;
+ right:-80px;top:-90px;
+ background:var(--card-glow,#79e8df);
+ opacity:.18;
+ filter:blur(35px);
+ z-index:-1;
+ animation:cardGlow 6s ease-in-out infinite alternate;
+}
+.live-card:after{
+ content:"";
+ position:absolute;
+ inset:0;
+ background:linear-gradient(145deg,#ffffff10,transparent 35%);
+ pointer-events:none;
+ z-index:-1;
+}
+.card-kicker{
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:15px;
+ color:#c5c8ce;
+ font-size:9px;
+ letter-spacing:.15em;
+ text-transform:uppercase;
+}
+.card-dot{
+ width:7px;height:7px;border-radius:50%;
+ background:var(--card-glow,#79e8df);
+ box-shadow:0 0 18px var(--card-glow,#79e8df);
+ flex:0 0 auto;
+}
+.clock-card{
+ grid-row:span 2;
+ --card-glow:#f5c85f;
+ background:
+   radial-gradient(circle at 70% 18%,#f7c9442d,transparent 35%),
+   linear-gradient(145deg,#ffffff0a,#f7c94406);
+}
+.clock-time{
+ margin-top:33px;
+ font-size:clamp(48px,6.7vw,92px);
+ line-height:.82;
+ letter-spacing:-.075em;
+ font-variant-numeric:tabular-nums;
+ white-space:nowrap;
+}
+.clock-zone{
+ margin-top:14px;
+ color:#b9bdc4;
+ font-size:12px;
+ letter-spacing:.07em;
+}
+.clock-date{
+ margin-top:7px;
+ color:#777c84;
+ font-size:11px;
+}
+.clock-orbit{
+ position:absolute;
+ right:-28px;
+ bottom:-60px;
+ width:260px;height:260px;
+ border-radius:50%;
+ border:1px solid #ffffff14;
+ box-shadow:0 0 0 35px #ffffff03,0 0 0 70px #ffffff02;
+}
+.clock-orbit:before{
+ content:"";
+ position:absolute;
+ width:10px;height:10px;
+ border-radius:50%;
+ background:#fff;
+ box-shadow:0 0 20px #fff,0 0 40px #f5c85f;
+ left:50%;top:-5px;
+ transform-origin:5px 135px;
+ animation:clockOrbit 12s linear infinite;
+}
+.clock-sweep{
+ position:absolute;
+ left:50%;top:50%;
+ width:1px;height:105px;
+ background:linear-gradient(#f5c85f,#0000);
+ transform-origin:bottom center;
+ animation:clockHand 60s linear infinite;
+}
+.weather-card{--card-glow:#239cff;background:linear-gradient(145deg,#197ee51b,#ffffff05)}
+.weather-icon{
+ position:absolute;
+ right:20px;top:48px;
+ width:88px;height:68px;
+}
+.weather-sun{
+ position:absolute;
+ width:36px;height:36px;
+ border-radius:50%;
+ right:9px;top:0;
+ background:radial-gradient(circle at 35% 30%,#fff8,#ffdd5b 38%,#ff9e2d 100%);
+ box-shadow:0 0 34px #ffbd4a88;
+ animation:sunPulse 3.4s ease-in-out infinite;
+}
+.weather-cloud{
+ position:absolute;
+ left:0;bottom:5px;
+ width:68px;height:27px;
+ border-radius:30px;
+ background:linear-gradient(180deg,#c9edff,#5caeff);
+ box-shadow:0 10px 25px #178ff655;
+}
+.weather-cloud:before,.weather-cloud:after{
+ content:"";
+ position:absolute;
+ border-radius:50%;
+ background:#bdeaff;
+}
+.weather-cloud:before{width:30px;height:30px;left:12px;top:-15px}
+.weather-cloud:after{width:24px;height:24px;left:36px;top:-10px}
+.weather-location{
+ margin-top:25px;
+ font-size:12px;
+ color:#b9c0ca;
+}
+.weather-temp{
+ margin-top:5px;
+ font-size:46px;
+ line-height:.9;
+ letter-spacing:-.065em;
+}
+.weather-status{
+ margin-top:8px;
+ color:#8ebde9;
+ font-size:11px;
+}
+.metric-card{--card-glow:#79e8df}
+.metric-big{
+ margin-top:24px;
+ font-size:46px;
+ line-height:.9;
+ letter-spacing:-.065em;
+}
+.metric-big small{
+ font-size:18px;
+ color:#aeb2b8;
+ letter-spacing:-.02em;
+}
+.metric-sub{
+ margin-top:10px;
+ color:#8f959e;
+ font-size:11px;
+}
+.mini-wave{
+ position:absolute;
+ left:0;right:0;bottom:0;height:85px;
+ opacity:.8;
+}
+.mini-wave svg{width:100%;height:100%;display:block}
+.mini-wave path{
+ fill:none;
+ stroke:var(--card-glow,#79e8df);
+ stroke-width:3;
+ stroke-linecap:round;
+ filter:drop-shadow(0 0 7px var(--card-glow,#79e8df));
+ stroke-dasharray:500;
+ stroke-dashoffset:500;
+ animation:waveDraw 3.4s ease-in-out infinite;
+}
+.atm-card{--card-glow:#b88cff;background:linear-gradient(145deg,#8d5be81a,#ffffff05)}
+.atm-ring{
+ position:absolute;
+ right:20px;bottom:-35px;
+ width:155px;height:155px;
+ border-radius:50%;
+ border:1px solid #ffffff1a;
+ box-shadow:inset 0 0 35px #b88cff13;
+}
+.atm-ring:before,.atm-ring:after{
+ content:"";
+ position:absolute;
+ border-radius:50%;
+ inset:16px;
+ border:1px dashed #ffffff12;
+}
+.atm-ring:after{
+ inset:42px;
+ border:2px solid #b88cff55;
+ box-shadow:0 0 30px #b88cff33;
+}
+.daylight-card{--card-glow:#f58ab8;grid-column:2 / span 2;background:linear-gradient(145deg,#d35f9b14,#ffffff05)}
+.daylight-times{
+ display:flex;
+ justify-content:space-between;
+ margin-top:18px;
+ color:#b7bac2;
+ font-size:11px;
+}
+.daylight-bar{
+ position:relative;
+ height:18px;
+ margin-top:17px;
+ border-radius:999px;
+ background:linear-gradient(90deg,#4d61ad,#f3b54a 40%,#fff36a 52%,#ef7656 72%,#3c3d73);
+ box-shadow:0 0 25px #f4a93b33;
+ overflow:visible;
+}
+.daylight-bar:before{
+ content:"";
+ position:absolute;
+ top:3px;bottom:3px;
+ left:var(--day-progress,48%);
+ width:12px;
+ transform:translateX(-50%);
+ border-radius:50%;
+ background:#fff;
+ box-shadow:0 0 0 5px #ffffff22,0 0 22px #fff,0 0 40px #f5b34a;
+}
+.daylight-bar:after{
+ content:"";
+ position:absolute;
+ top:50%;left:0;
+ width:100%;
+ height:1px;
+ background:#ffffff30;
+}
+.daylight-label{
+ margin-top:13px;
+ display:flex;
+ justify-content:space-between;
+ color:#858a93;
+ font-size:10px;
+}
+.live-updated{
+ position:absolute;
+ right:24px;
+ bottom:20px;
+ color:#6e747d;
+ font-size:9px;
+ letter-spacing:.08em;
+}
+@keyframes dashboardAura{to{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes cardGlow{to{transform:translate(-18px,15px) scale(1.12);opacity:.28}}
+@keyframes clockOrbit{to{transform:rotate(360deg)}}
+@keyframes clockHand{to{transform:rotate(360deg)}}
+@keyframes sunPulse{50%{transform:scale(1.08);box-shadow:0 0 48px #ffbd4aaa}}
+@keyframes waveDraw{
+ 0%,10%{stroke-dashoffset:500}
+ 55%,80%{stroke-dashoffset:0}
+ 100%{stroke-dashoffset:-500}
+}
+@media(max-width:900px){
+ .dashboard-head{display:block}
+ .dashboard-head p{margin-top:20px}
+ .dashboard-grid{
+   grid-template-columns:1fr 1fr;
+   grid-template-rows:245px 245px 245px;
+ }
+ .clock-card{grid-row:span 2}
+ .daylight-card{grid-column:1 / span 2}
+}
+@media(max-width:620px){
+ .daily-dashboard{padding:90px 0 100px}
+ .dashboard-grid{
+   display:flex;
+   flex-direction:column;
+ }
+ .live-card{min-height:230px}
+ .clock-card{min-height:330px}
+ .daylight-card{min-height:230px}
+ .clock-time{font-size:58px}
+}
+@media(prefers-reduced-motion:reduce){
+ .daily-dashboard:before,.live-card:before,.clock-orbit:before,.clock-sweep,.weather-sun,.mini-wave path{animation:none!important}
+}
+
+/* QST-documented emergency flood response feature */
+.flood-response-card{
+ position:relative;
+ margin:42px 0 0;
+ padding:34px;
+ border:1px solid #ffffff1c;
+ border-radius:30px;
+ overflow:hidden;
+ background:
+   radial-gradient(circle at 82% 18%,#f5c85f18,transparent 34%),
+   radial-gradient(circle at 8% 80%,#79e8df12,transparent 30%),
+   linear-gradient(145deg,#ffffff09,#ffffff03);
+ box-shadow:0 30px 90px #0008,inset 0 1px #ffffff12;
+ backdrop-filter:blur(20px) saturate(135%);
+ -webkit-backdrop-filter:blur(20px) saturate(135%);
+}
+.flood-response-card:before{
+ content:"";
+ position:absolute;
+ width:260px;height:260px;
+ right:-100px;bottom:-120px;
+ border-radius:50%;
+ background:#f5c85f;
+ opacity:.12;
+ filter:blur(40px);
+ animation:floodGlow 6s ease-in-out infinite alternate;
+}
+.flood-response-card h3{
+ position:relative;
+ max-width:850px;
+ font-size:clamp(30px,4vw,55px);
+ line-height:.95;
+ letter-spacing:-.06em;
+ margin:12px 0 20px;
+}
+.flood-lead,.flood-detail{
+ position:relative;
+ max-width:920px;
+ color:#b5b8bf;
+ font-size:15px;
+ line-height:1.55;
+}
+.flood-grid{
+ position:relative;
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ gap:9px;
+ margin:28px 0;
+}
+.flood-grid>div{
+ padding:18px;
+ border-radius:20px;
+ border:1px solid #ffffff12;
+ background:#00000018;
+}
+.flood-grid b{
+ display:block;
+ font-size:28px;
+ line-height:1;
+ letter-spacing:-.04em;
+ color:#f1f2f4;
+}
+.flood-grid span{
+ display:block;
+ margin-top:8px;
+ color:#8f949d;
+ font-size:10px;
+ line-height:1.35;
+}
+.flood-response-card .radio-link{
+ position:relative;
+ display:inline-flex;
+ margin-top:20px;
+}
+@keyframes floodGlow{
+ from{transform:translate(-10px,4px) scale(.9);opacity:.08}
+ to{transform:translate(8px,-10px) scale(1.12);opacity:.18}
+}
+@media(max-width:900px){
+ .flood-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+ .flood-response-card{padding:25px}
+ .flood-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+ .flood-response-card:before{animation:none}
+}
+
+/* Dedicated volunteer and community service section */
+.volunteer-feature{
+ position:relative;
+ padding:150px 0;
+ overflow:hidden;
+ background:
+   radial-gradient(circle at 12% 20%,#79e8df0b,transparent 28%),
+   radial-gradient(circle at 86% 42%,#f5c85f0a,transparent 30%);
+}
+.volunteer-feature:before{
+ content:"";
+ position:absolute;
+ width:600px;height:600px;
+ right:-240px;top:20%;
+ border-radius:50%;
+ background:conic-gradient(#79e8df10,#719bff0c,#f5c85f0d,#f58ab80a,#79e8df10);
+ filter:blur(75px);
+ animation:volunteerAura 16s linear infinite;
+}
+.volunteer-org-grid{
+ position:relative;
+ z-index:2;
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:12px;
+ margin-top:45px;
+}
+.volunteer-org-card{
+ position:relative;
+ min-height:300px;
+ padding:27px;
+ border-radius:30px;
+ border:1px solid #ffffff18;
+ background:
+   radial-gradient(circle at 85% 12%,var(--volunteer-glow)18,transparent 36%),
+   linear-gradient(145deg,#ffffff09,#ffffff03);
+ box-shadow:0 30px 85px #0008,inset 0 1px #ffffff12;
+ backdrop-filter:blur(22px) saturate(135%);
+ -webkit-backdrop-filter:blur(22px) saturate(135%);
+ overflow:hidden;
+ transition:transform .5s cubic-bezier(.16,1,.3,1),border-color .4s ease;
+}
+.volunteer-org-card:after{
+ content:"";
+ position:absolute;
+ width:170px;height:170px;
+ right:-70px;bottom:-80px;
+ border-radius:50%;
+ background:var(--volunteer-glow);
+ opacity:.09;
+ filter:blur(30px);
+}
+.volunteer-org-card:hover{
+ transform:translateY(-8px);
+ border-color:#ffffff30;
+}
+.volunteer-org-top{
+ position:relative;
+ z-index:2;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ color:#aeb2b9;
+ font-size:9px;
+ letter-spacing:.14em;
+}
+.volunteer-org-top i{
+ width:7px;height:7px;border-radius:50%;
+ background:var(--volunteer-glow);
+ box-shadow:0 0 18px var(--volunteer-glow);
+}
+.volunteer-org-card h3{
+ position:relative;
+ z-index:2;
+ margin:38px 0 16px;
+ font-size:clamp(27px,3vw,40px);
+ line-height:.95;
+ letter-spacing:-.055em;
+}
+.volunteer-org-card p{
+ position:relative;
+ z-index:2;
+ color:#a6aab2;
+ font-size:13px;
+ line-height:1.55;
+}
+.volunteer-tags{
+ position:absolute;
+ z-index:3;
+ left:27px;right:27px;bottom:24px;
+ display:flex;
+ flex-wrap:wrap;
+ gap:7px;
+}
+.volunteer-tags span{
+ padding:7px 10px;
+ border:1px solid #ffffff12;
+ border-radius:999px;
+ background:#ffffff06;
+ color:#8f949d;
+ font-size:9px;
+}
+.volunteer-story{
+ position:relative;
+ z-index:2;
+ margin-top:12px;
+ padding:38px;
+ border-radius:30px;
+ border:1px solid #ffffff16;
+ background:#ffffff05;
+ box-shadow:0 25px 70px #0007,inset 0 1px #ffffff0d;
+ backdrop-filter:blur(18px);
+ -webkit-backdrop-filter:blur(18px);
+}
+.volunteer-story-head{
+ display:flex;
+ align-items:end;
+ justify-content:space-between;
+ gap:30px;
+ padding-bottom:28px;
+ border-bottom:1px solid #ffffff0d;
+}
+.volunteer-story-head h3{
+ margin:9px 0 0;
+ font-size:clamp(30px,4vw,55px);
+ line-height:.95;
+ letter-spacing:-.06em;
+}
+.volunteer-timeline{
+ margin-top:8px;
+}
+.volunteer-timeline article{
+ display:grid;
+ grid-template-columns:110px 1fr;
+ gap:22px;
+ padding:24px 0;
+ border-bottom:1px solid #ffffff0b;
+}
+.volunteer-timeline article:last-child{border-bottom:0}
+.volunteer-timeline article>span{
+ color:#737982;
+ font-size:10px;
+ letter-spacing:.12em;
+ padding-top:4px;
+}
+.volunteer-timeline b{
+ font-size:17px;
+ color:#e9eaec;
+}
+.volunteer-timeline p{
+ margin:7px 0 0;
+ max-width:850px;
+ color:#969ba4;
+ font-size:12px;
+ line-height:1.5;
+}
+@keyframes volunteerAura{to{transform:rotate(360deg)}}
+@media(max-width:900px){
+ .volunteer-org-grid{grid-template-columns:1fr}
+ .volunteer-org-card{min-height:250px}
+ .volunteer-story-head{display:block}
+}
+@media(max-width:600px){
+ .volunteer-feature{padding:105px 0}
+ .volunteer-story{padding:25px}
+ .volunteer-timeline article{grid-template-columns:1fr;gap:8px}
+}
+@media(prefers-reduced-motion:reduce){
+ .volunteer-feature:before{animation:none}
+}
+.section{padding:150px 0}
+.section-title{font-size:clamp(46px,7vw,90px);letter-spacing:-.075em;line-height:.9;margin:14px 0 20px}
+.section-lead{font-size:20px;color:#aeb1b8;max-width:760px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:60px}
+.card{min-height:300px;border:1px solid #ffffff14;border-radius:30px;padding:26px;background:#ffffff06;overflow:hidden;position:relative;transition:transform .4s ease,border-color .4s ease}
+.card:hover{transform:translateY(-7px);border-color:#ffffff2b}
+.card:before{content:"";position:absolute;width:210px;height:210px;border-radius:50%;right:-100px;top:-100px;background:var(--glow);filter:blur(25px);opacity:.25}
+.card .num{font-size:11px;color:#858991}.card h3{font-size:24px;line-height:1.05;letter-spacing:-.04em;margin-top:80px}.card p{color:#a9acb3}
+.projects{padding:110px 0}.project-stack{display:grid;gap:12px;margin-top:50px}
+.project{min-height:420px;border:1px solid #ffffff16;border-radius:34px;padding:35px;position:relative;overflow:hidden;background:#ffffff05}
+.project:nth-child(1){background:linear-gradient(135deg,#79e8df10,#fff0)}
+.project:nth-child(2){background:linear-gradient(135deg,#f58ab810,#fff0)}
+.project:nth-child(3){background:linear-gradient(135deg,#719bff10,#fff0)}
+.project:nth-child(4){background:linear-gradient(135deg,#b88cff10,#fff0)}
+.project .number{font-size:11px;color:#8c9098}.project h3{font-size:clamp(32px,5vw,64px);line-height:.92;letter-spacing:-.065em;max-width:820px;margin:65px 0 18px}.project p{font-size:18px;color:#aeb1b8;max-width:720px}
+.pills{display:flex;flex-wrap:wrap;gap:7px}.pill{font-size:11px;color:#c9cbd0;border:1px solid #ffffff18;border-radius:999px;padding:6px 9px;background:#ffffff07}
+.timeline{padding:120px 0}.timeline-list{margin-top:50px;border-top:1px solid #ffffff13}.item{display:grid;grid-template-columns:180px 1fr;gap:30px;padding:27px 0;border-bottom:1px solid #ffffff13}.item .year{color:#858a93;font-size:13px}.item h3{margin:0;font-size:25px;letter-spacing:-.035em}.item p{margin:7px 0 0;color:#a5a9b0}
+.pub-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:50px}.pub{padding:25px;border:1px solid #ffffff14;border-radius:25px;background:#ffffff05}.pub .journal{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8d929a}.pub h3{font-size:19px;line-height:1.15;margin:12px 0}.pub p{margin:0;color:#9fa3aa;font-size:13px}.pub a{color:#9edbd6}
+.contact{padding:150px 0}.contact-box{border:1px solid #ffffff17;border-radius:40px;padding:60px;background:linear-gradient(135deg,#79e8df0d,#f58ab80b,#719bff0b)}.contact h2{font-size:clamp(48px,8vw,100px);line-height:.86;letter-spacing:-.075em;margin:15px 0 25px}.btn{display:inline-block;border:1px solid #ffffff25;border-radius:999px;padding:12px 18px;margin-right:8px;margin-top:10px;background:#ffffff09}.btn.white{background:#fff;color:#111;border-color:#fff}
+footer{padding:30px 0 60px;color:#6f737b;font-size:12px}
+@media(max-width:800px){
+ .navlinks a:nth-child(-n+2){display:none}
+ .story{height:300vh}.portrait-card{inset:12% 8%}.float-card{width:160px;padding:13px}.fc1{left:0}.fc2{right:0}.fc3{left:0}.fc4{right:0}
+ .grid,.pub-grid{grid-template-columns:1fr}.item{grid-template-columns:1fr;gap:5px}
+}
+
+/* Embedded AI assistant */
+.chat-overlay{position:fixed;inset:0;z-index:100;background:#0009;backdrop-filter:blur(14px);display:none;align-items:flex-end;justify-content:flex-end;padding:24px}
+.chat-overlay.open{display:flex}
+.chat-panel{width:min(440px,100%);height:min(720px,calc(100vh - 48px));border:1px solid #ffffff22;border-radius:32px;background:linear-gradient(145deg,#15161ccc,#08090cf2);box-shadow:0 40px 120px #000d;overflow:hidden;display:flex;flex-direction:column;transform:translateY(20px) scale(.98);opacity:0;transition:.28s ease}
+.chat-overlay.open .chat-panel{transform:none;opacity:1}
+.chat-head{padding:18px 18px 14px;border-bottom:1px solid #ffffff12;display:flex;align-items:center;justify-content:space-between}
+.chat-brand{display:flex;align-items:center;gap:11px}.chat-orb{width:38px;height:38px;border-radius:50%;background:conic-gradient(from 40deg,#79e8df,#719bff,#f58ab8,#79e8df);box-shadow:0 0 30px #79e8df35}
+.chat-brand b{display:block;font-size:15px}.chat-brand span{display:block;font-size:11px;color:#8f949c;margin-top:2px}
+.chat-close{width:38px;height:38px;border:1px solid #ffffff16;border-radius:50%;background:#ffffff09;color:#fff;font-size:20px;cursor:pointer}
+.chat-messages{flex:1;overflow:auto;padding:20px 16px;display:flex;flex-direction:column;gap:12px}
+.chat-msg{max-width:88%;padding:12px 14px;border-radius:20px;font-size:14px;line-height:1.5;white-space:pre-wrap}
+.chat-msg.ai{align-self:flex-start;background:#ffffff0b;border:1px solid #ffffff12;color:#e8e9ec;border-bottom-left-radius:7px}
+.chat-msg.user{align-self:flex-end;background:linear-gradient(135deg,#79e8df,#719bff);color:#071013;border-bottom-right-radius:7px}
+.chat-msg.typing{color:#9ca1aa}.typing-dots{display:inline-flex;gap:4px}.typing-dots i{width:5px;height:5px;border-radius:50%;background:#aaa;animation:dot 1s infinite}.typing-dots i:nth-child(2){animation-delay:.15s}.typing-dots i:nth-child(3){animation-delay:.3s}
+@keyframes dot{50%{opacity:.25;transform:translateY(-2px)}}
+.chat-suggestions{padding:0 16px 12px;display:flex;gap:7px;overflow:auto}.chat-suggestion{flex:0 0 auto;border:1px solid #ffffff16;background:#ffffff07;color:#cfd2d8;border-radius:999px;padding:8px 11px;font-size:11px;cursor:pointer}
+.chat-form{padding:12px;border-top:1px solid #ffffff12;display:flex;gap:8px;background:#08090ccf}
+.chat-input{flex:1;min-width:0;border:1px solid #ffffff18;background:#ffffff09;color:#fff;border-radius:20px;padding:12px 14px;outline:none;font:inherit;resize:none;height:48px}
+.chat-input:focus{border-color:#79e8df66;box-shadow:0 0 0 3px #79e8df0c}
+.chat-send{width:48px;height:48px;border:0;border-radius:50%;background:#fff;color:#111;cursor:pointer;font-size:19px}.chat-send:disabled{opacity:.45;cursor:not-allowed}
+.chat-disclaimer{font-size:9px;color:#686d75;text-align:center;padding:0 14px 10px}
+@media(max-width:600px){
+ .chat-overlay{padding:0}.chat-panel{width:100%;height:100%;border-radius:28px 28px 0 0}
+}
+
+
+.radio-feature{padding:140px 0}
+.radio-hero{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:52px}
+.radio-photo{position:relative;min-height:440px;border:1px solid #ffffff18;border-radius:34px;overflow:hidden;background:#111;margin:0}
+.radio-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s ease,filter .7s ease}
+.radio-photo:hover img{transform:scale(1.035);filter:saturate(1.08)}
+.radio-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0000 40%,#000d 100%);pointer-events:none}
+.radio-caption{position:absolute;left:26px;right:26px;bottom:23px;z-index:2}
+.radio-caption .mini{font-size:10px;text-transform:uppercase;letter-spacing:.16em;color:#d1d4da}
+.radio-caption h3{font-size:31px;letter-spacing:-.05em;line-height:1;margin:8px 0}
+.radio-caption p{font-size:13px;color:#c0c4cb;margin:0;max-width:500px}
+.radio-story{margin-top:14px;border:1px solid #ffffff16;border-radius:34px;padding:34px;background:linear-gradient(135deg,#79e8df0c,#719bff09,#f58ab809)}
+.radio-story-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:start}
+.radio-story h3{font-size:clamp(34px,5vw,62px);line-height:.92;letter-spacing:-.065em;margin:10px 0 18px}
+.radio-story p{color:#aeb2b9;font-size:17px;max-width:720px}
+.radio-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.radio-stat{padding:18px;border:1px solid #ffffff14;border-radius:22px;background:#ffffff06}
+.radio-stat b{font-size:28px;letter-spacing:-.04em;display:block}.radio-stat span{font-size:11px;color:#9ca1a9}
+.radio-link{display:inline-block;margin-top:16px;padding:10px 15px;border:1px solid #ffffff20;border-radius:999px;background:#ffffff08;font-size:12px}
+.radio-source{font-size:10px;color:#70757d;margin-top:15px}
+.radio-profile{display:flex;align-items:center;gap:16px;margin-top:22px;padding:12px;border:1px solid #ffffff14;border-radius:22px;background:#ffffff06}
+.radio-profile img{width:76px;height:76px;border-radius:18px;object-fit:cover;background:#fff}
+.radio-profile b{display:block;font-size:16px}.radio-profile span{display:block;font-size:11px;color:#969ba4;margin-top:4px}
+@media(max-width:800px){
+ .radio-hero,.radio-story-grid{grid-template-columns:1fr}
+ .radio-photo{min-height:330px}.radio-story{padding:24px}.radio-stats{grid-template-columns:1fr 1fr}
+}
+
+.researchgate-link{
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:18px;
+ margin-top:12px;
+ padding:16px 18px;
+ border:1px solid #ffffff18;
+ border-radius:18px;
+ background:linear-gradient(120deg,#ffffff08,transparent);
+ color:#f2f3f5;
+ text-decoration:none;
+ transition:transform .35s ease,border-color .35s ease,background .35s ease;
+}
+.researchgate-link:hover{
+ transform:translateY(-3px);
+ border-color:#ffffff32;
+ background:#ffffff0d;
+}
+.contact-link-label{font-size:13px;font-weight:600}
+.contact-link-arrow{font-size:20px}
+
+
+
+/* ============================================================
+   Final visual refinement
+   ============================================================ */
+
+/* Small animated black hole */
+.blackhole-float{
+  position:absolute;
+  right:7vw;
+  top:17%;
+  z-index:2;
+  width:118px;
+  height:138px;
+  pointer-events:none;
+  opacity:0;
+  transform:translate3d(35px,20px,0) scale(.82);
+  transition:opacity 1.1s ease .65s,transform 1.2s cubic-bezier(.16,1,.3,1) .65s;
+}
+.hero.is-ready .blackhole-float{
+  opacity:.82;
+  transform:translate3d(0,0,0) scale(1);
+  animation:bhFloat 7s ease-in-out infinite;
+}
+.blackhole-caption{
+  position:absolute;
+  top:0;
+  left:4px;
+  color:#777c84;
+  font-size:7px;
+  letter-spacing:.16em;
+}
+.blackhole{
+  position:absolute;
+  left:8px;
+  top:23px;
+  width:102px;
+  height:102px;
+  border-radius:50%;
+  filter:drop-shadow(0 14px 30px #000);
+}
+.bh-orbit{
+  position:absolute;
+  inset:11px -3px;
+  border-radius:50%;
+  border:5px solid transparent;
+  transform:rotate(-18deg) scaleY(.42);
+  background:
+    linear-gradient(#08090d,#08090d) padding-box,
+    conic-gradient(from 20deg,#ffcf5a,#f58ab8,#79e8df,#ffcf5a) border-box;
+  box-shadow:0 0 25px #f58ab84a,0 0 45px #ffcf5a25;
+  animation:bhSpin 5.2s linear infinite;
+}
+.bh-orbit-2{
+  inset:20px -12px;
+  transform:rotate(28deg) scaleY(.25);
+  opacity:.48;
+  border-width:3px;
+  animation-duration:7s;
+  animation-direction:reverse;
+}
+.bh-core{
+  position:absolute;
+  inset:28px;
+  border-radius:50%;
+  background:radial-gradient(circle at 38% 35%,#171a20 0 18%,#020307 48%,#000 72%);
+  box-shadow:0 0 0 5px #000,0 0 25px #000,0 0 48px #f58ab820;
+  z-index:3;
+}
+.bh-photon{
+  position:absolute;
+  inset:23px;
+  border-radius:50%;
+  border:2px solid #fff6;
+  box-shadow:0 0 16px #fff4;
+  z-index:4;
+  animation:bhPulse 2.6s ease-in-out infinite;
+}
+.bh-particle{
+  position:absolute;
+  width:3px;
+  height:3px;
+  border-radius:50%;
+  background:#fff;
+  box-shadow:0 0 8px #fff;
+  z-index:5;
+}
+.bh-particle.p1{left:8px;top:61px;animation:bhParticle1 3.2s linear infinite}
+.bh-particle.p2{right:7px;top:38px;animation:bhParticle2 4s linear infinite}
+.bh-particle.p3{left:43px;bottom:2px;animation:bhParticle3 3.7s linear infinite}
+@keyframes bhFloat{
+  0%,100%{margin-top:0;transform:translate3d(0,0,0) scale(1)}
+  50%{margin-top:-8px;transform:translate3d(0,-4px,0) scale(1.025)}
+}
+@keyframes bhSpin{to{transform:rotate(342deg) scaleY(.42)}}
+@keyframes bhPulse{
+  0%,100%{opacity:.3;transform:scale(.92)}
+  50%{opacity:.9;transform:scale(1.08)}
+}
+@keyframes bhParticle1{
+  0%{transform:translate(0,0);opacity:0}
+  25%{opacity:1}
+  100%{transform:translate(80px,-18px);opacity:0}
+}
+@keyframes bhParticle2{
+  0%{transform:translate(0,0);opacity:0}
+  25%{opacity:1}
+  100%{transform:translate(-75px,45px);opacity:0}
+}
+@keyframes bhParticle3{
+  0%{transform:translate(0,0);opacity:0}
+  20%{opacity:1}
+  100%{transform:translate(28px,-70px);opacity:0}
+}
+
+/* Compact floating live dashboard */
+.dashboard-grid{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  grid-template-rows:150px 150px;
+  gap:10px;
+  margin-top:34px;
+}
+.live-card{
+  min-height:150px;
+  height:150px;
+  border-radius:24px;
+  padding:18px;
+}
+.clock-card{grid-row:auto}
+.clock-time{margin-top:20px;font-size:clamp(34px,4vw,52px)}
+.clock-zone{margin-top:8px;font-size:9px}
+.clock-date{margin-top:5px;font-size:8px}
+.clock-orbit{width:145px;height:145px;right:-38px;bottom:-70px}
+.clock-sweep{height:58px}
+.weather-icon{transform:scale(.72);transform-origin:top right}
+.weather-location{margin-top:20px;font-size:9px}
+.weather-temp{margin-top:3px;font-size:36px}
+.weather-status{font-size:8px}
+.metric-big{margin-top:17px;font-size:36px}
+.metric-sub{margin-top:5px;font-size:8px}
+.mini-wave{height:48px}
+.atm-ring{width:90px;height:90px;right:-9px;bottom:-38px}
+.daylight-times{margin-top:16px;font-size:8px}
+.daylight-bar{margin-top:16px}
+.daylight-label{margin-top:8px;font-size:7px}
+
+/* Sunrise card */
+.sunrise-card{
+  --card-glow:#ffb83d;
+  background:linear-gradient(145deg,#ffb83d12,#ffffff05);
+}
+.sunrise-visual{
+  position:absolute;
+  right:15px;
+  top:37px;
+  width:92px;
+  height:55px;
+  overflow:hidden;
+}
+.sunrise-horizon{
+  position:absolute;
+  left:-5px;
+  right:-5px;
+  bottom:7px;
+  height:2px;
+  background:linear-gradient(90deg,transparent,#ffcf5a,#fff0a2,#ff9e2d,transparent);
+  box-shadow:0 0 13px #ffcf5a99;
+}
+.sunrise-sun{
+  position:absolute;
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  left:30px;
+  bottom:7px;
+  background:radial-gradient(circle at 35% 30%,#fff,#ffdf6b 45%,#ff9c2d);
+  box-shadow:0 0 26px #ffbd4a99;
+  animation:sunRise 4.2s ease-in-out infinite;
+}
+.sunrise-rays{
+  position:absolute;
+  width:55px;
+  height:55px;
+  left:18px;
+  bottom:-5px;
+  border-radius:50%;
+  border:1px dashed #ffcf5a55;
+  animation:sunRays 8s linear infinite;
+}
+.astro-time{
+  position:absolute;
+  left:18px;
+  bottom:29px;
+  font-size:30px;
+  font-variant-numeric:tabular-nums;
+  letter-spacing:-.06em;
+}
+.astro-sub{
+  position:absolute;
+  left:18px;
+  bottom:15px;
+  color:#92969e;
+  font-size:8px;
+}
+@keyframes sunRise{
+  0%,100%{transform:translateY(6px);opacity:.76}
+  50%{transform:translateY(-4px);opacity:1}
+}
+@keyframes sunRays{to{transform:rotate(360deg)}}
+
+/* Moon condition card */
+.moon-card{
+  --card-glow:#aebcf5;
+  background:
+    radial-gradient(circle at 76% 25%,#aebcf51b,transparent 35%),
+    linear-gradient(145deg,#8c9de812,#ffffff05);
+}
+.moon-visual{
+  position:absolute;
+  right:17px;
+  top:33px;
+  width:66px;
+  height:66px;
+}
+.moon-orb{
+  position:relative;
+  width:66px;
+  height:66px;
+  border-radius:50%;
+  overflow:hidden;
+  background:radial-gradient(circle at 34% 28%,#fff 0,#e7ebf3 35%,#b9c1cf 68%,#8791a3 100%);
+  box-shadow:0 0 22px #b9c8ff55,inset -8px -8px 15px #4c566b44;
+}
+.moon-shadow{
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  background:radial-gradient(circle at 60% 40%,#090b10 0,#020307 75%);
+  transform:translateX(var(--moon-shadow-x,0%));
+  transition:transform .8s ease;
+}
+.moon-crater{
+  position:absolute;
+  border-radius:50%;
+  background:#7e879744;
+  filter:blur(.3px);
+}
+.crater-a{width:9px;height:9px;left:16px;top:18px}
+.crater-b{width:6px;height:6px;left:39px;top:38px}
+.crater-c{width:11px;height:7px;left:28px;top:48px}
+.moon-name{max-width:130px;font-size:17px;line-height:1;letter-spacing:-.04em}
+.moon-card .astro-sub{font-size:8px}
+
+/* Floating motion */
+.daily-dashboard.is-visible .live-card{
+  animation:widgetFloat 6.5s ease-in-out infinite;
+}
+.daily-dashboard.is-visible .live-card:nth-child(1){animation-delay:-.8s}
+.daily-dashboard.is-visible .live-card:nth-child(2){animation-delay:-2.2s}
+.daily-dashboard.is-visible .live-card:nth-child(3){animation-delay:-3.4s}
+.daily-dashboard.is-visible .live-card:nth-child(4){animation-delay:-1.5s}
+.daily-dashboard.is-visible .live-card:nth-child(5){animation-delay:-4.1s}
+.daily-dashboard.is-visible .live-card:nth-child(6){animation-delay:-2.7s}
+.daily-dashboard.is-visible .live-card:nth-child(7){animation-delay:-4.7s}
+
+@media(max-width:1050px){
+  .dashboard-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    grid-template-rows:150px 150px 150px;
+  }
+  .blackhole-float{right:3vw;top:14%}
+}
+@media(max-width:760px){
+  .dashboard-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-rows:145px 145px 145px 145px;
+  }
+  .live-card{min-height:145px;height:145px;padding:16px}
+  .blackhole-float{right:2vw;top:12%;transform:scale(.78)}
+  .hero.is-ready .blackhole-float{transform:scale(.78)}
+}
+@media(max-width:520px){
+  .blackhole-float{display:none}
+  .dashboard-grid{grid-template-columns:1fr 1fr;gap:8px}
+  .astro-time{font-size:26px}
+  .moon-visual{transform:scale(.82);transform-origin:top right}
+}
+@media(prefers-reduced-motion:reduce){
+  .blackhole-float,.bh-orbit,.bh-photon,.bh-particle,
+  .sunrise-sun,.sunrise-rays,.daily-dashboard.is-visible .live-card{
+    animation:none!important;
+  }
+}
+
+
+/* Same-line astronomical row: Moon | Daylight | Sunrise */
+.dashboard-grid{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  grid-template-rows:150px 188px;
+}
+.dashboard-grid .daylight-card{
+  grid-column:2 / span 2;
+  grid-row:2;
+}
+.dashboard-grid .sunrise-card{
+  grid-column:4;
+  grid-row:2;
+}
+.dashboard-grid .moon-card{
+  grid-column:1;
+  grid-row:2;
+}
+
+/* ECG signal moving subtly behind the dashboard */
+.daily-dashboard{
+  position:relative;
+  overflow:hidden;
+}
+.daily-dashboard .dashboard-ecg-bg{
+  position:absolute;
+  z-index:0;
+  left:-4%;
+  right:-4%;
+  top:52%;
+  height:260px;
+  pointer-events:none;
+  opacity:.13;
+  transform:translateY(-50%);
+  filter:drop-shadow(0 0 8px #79e8df55);
+}
+.dashboard-ecg-bg svg{
+  width:100%;
+  height:100%;
+  display:block;
+  overflow:visible;
+}
+.dashboard-ecg-bg .ecg-bg-grid{
+  fill:none;
+  stroke:#ffffff0a;
+  stroke-width:1;
+}
+.dashboard-ecg-bg .ecg-bg-line{
+  fill:none;
+  stroke:url(#dashboardEcgGradient);
+  stroke-width:3;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-dasharray:180 34 90 28;
+  stroke-dashoffset:0;
+  animation:dashboardEcgMove 5.5s linear infinite;
+}
+.dashboard-ecg-bg .ecg-bg-line-soft{
+  fill:none;
+  stroke:#79e8df;
+  stroke-width:1.2;
+  opacity:.22;
+  stroke-dasharray:260 80;
+  animation:dashboardEcgMove 9s linear infinite reverse;
+}
+@keyframes dashboardEcgMove{
+  to{stroke-dashoffset:-660}
+}
+
+/* Keep cards above the ECG */
+.daily-dashboard .wrap{
+  position:relative;
+  z-index:2;
+}
+.dashboard-head,
+.dashboard-grid{
+  position:relative;
+  z-index:2;
+}
+
+/* Slightly more horizontal space for the daylight widget */
+.daylight-card .daylight-times{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+.daylight-card .daylight-bar{
+  position:relative;
+  z-index:2;
+}
+
+/* Responsive fallback */
+@media(max-width:1050px){
+  .dashboard-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    grid-template-rows:150px 150px 150px;
+  }
+  .dashboard-grid .daylight-card{
+    grid-column:1 / span 2;
+    grid-row:2;
+  }
+  .dashboard-grid .sunrise-card{
+    grid-column:3;
+    grid-row:2;
+  }
+  .dashboard-grid .moon-card{
+    grid-column:1;
+    grid-row:3;
+  }
+}
+@media(max-width:760px){
+  .dashboard-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-rows:145px 145px 145px 145px;
+  }
+  .dashboard-grid .daylight-card{
+    grid-column:1 / span 2;
+    grid-row:3;
+  }
+  .dashboard-grid .sunrise-card{
+    grid-column:2;
+    grid-row:4;
+  }
+  .dashboard-grid .moon-card{
+    grid-column:1;
+    grid-row:4;
+  }
+  .daily-dashboard .dashboard-ecg-bg{
+    opacity:.08;
+    height:180px;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .dashboard-ecg-bg .ecg-bg-line,
+  .dashboard-ecg-bg .ecg-bg-line-soft{
+    animation:none!important;
+  }
+}
+
+
+/* ============================================================
+   Fully animated "dancing" glass navigation deck
+   ============================================================ */
+.quick-tabs{
+  min-height:820px;
+  isolation:isolate;
+}
+.quick-tabs-wrap{
+  position:relative;
+  z-index:5;
+}
+.tab-deck{
+  min-height:640px;
+}
+.quick-tab{
+  animation-play-state:paused;
+  will-change:transform,translate,rotate,scale,filter;
+}
+.quick-tabs.is-visible .quick-tab{
+  animation-play-state:running;
+}
+.quick-tabs.is-visible .qt1{
+  animation:tabDance1 7.2s ease-in-out infinite;
+  animation-delay:-1.1s;
+}
+.quick-tabs.is-visible .qt2{
+  animation:tabDance2 8.4s ease-in-out infinite;
+  animation-delay:-3.2s;
+}
+.quick-tabs.is-visible .qt3{
+  animation:tabDance3 7.8s ease-in-out infinite;
+  animation-delay:-4.7s;
+}
+.quick-tabs.is-visible .qt4{
+  animation:tabDance4 9s ease-in-out infinite;
+  animation-delay:-2.3s;
+}
+@keyframes tabDance1{
+  0%,100%{translate:0 0;rotate:-1deg;scale:1}
+  18%{translate:-7px -15px;rotate:-5deg;scale:1.012}
+  38%{translate:9px -25px;rotate:2deg;scale:1.025}
+  62%{translate:15px -9px;rotate:5deg;scale:1.01}
+  82%{translate:-5px -20px;rotate:-2deg;scale:1.02}
+}
+@keyframes tabDance2{
+  0%,100%{translate:0 0;rotate:1deg;scale:1}
+  20%{translate:12px -11px;rotate:5deg;scale:1.02}
+  44%{translate:-7px -28px;rotate:-3deg;scale:1.035}
+  68%{translate:-17px -12px;rotate:-6deg;scale:1.012}
+  86%{translate:5px -21px;rotate:2deg;scale:1.025}
+}
+@keyframes tabDance3{
+  0%,100%{translate:0 0;rotate:-1deg;scale:1}
+  22%{translate:-13px -19px;rotate:-5deg;scale:1.018}
+  48%{translate:5px -32px;rotate:3deg;scale:1.03}
+  72%{translate:18px -8px;rotate:6deg;scale:1.012}
+  88%{translate:-4px -18px;rotate:0deg;scale:1.022}
+}
+@keyframes tabDance4{
+  0%,100%{translate:0 0;rotate:1deg;scale:1}
+  17%{translate:10px -13px;rotate:4deg;scale:1.02}
+  41%{translate:-12px -30px;rotate:-4deg;scale:1.035}
+  65%{translate:-19px -10px;rotate:-7deg;scale:1.015}
+  84%{translate:6px -23px;rotate:2deg;scale:1.025}
+}
+.quick-tab:hover{
+  animation-play-state:paused!important;
+  translate:0 -9px!important;
+  rotate:0deg!important;
+  scale:1.025!important;
+}
+.quick-tab:hover .arrow{
+  transform:rotate(16deg) scale(1.12);
+}
+.quick-tabs.is-active .quick-tab{
+  animation-play-state:paused;
+}
+
+/* ============================================================
+   Large standalone ECG — separate from the glass cards
+   ============================================================ */
+.quick-ecg{
+  position:absolute;
+  z-index:2;
+  left:2%;
+  right:2%;
+  top:49%;
+  height:360px;
+  pointer-events:none;
+  opacity:0;
+  transform:translateY(35px) scale(.96);
+  transition:opacity 1.1s ease .35s,transform 1.2s cubic-bezier(.16,1,.3,1) .35s;
+}
+.quick-tabs.is-visible .quick-ecg{
+  opacity:.62;
+  transform:translateY(0) scale(1);
+}
+.quick-ecg:before{
+  content:"";
+  position:absolute;
+  inset:10% 3%;
+  background:
+    radial-gradient(circle at 20% 50%,#79e8df16,transparent 24%),
+    radial-gradient(circle at 52% 50%,#719bff12,transparent 24%),
+    radial-gradient(circle at 82% 50%,#f58ab814,transparent 24%);
+  filter:blur(30px);
+}
+.quick-ecg svg{
+  width:100%;
+  height:100%;
+  overflow:visible;
+}
+.quick-ecg-grid{
+  fill:none;
+  stroke:#ffffff0a;
+  stroke-width:1;
+}
+.quick-ecg-line{
+  fill:none;
+  stroke:url(#quickEcgGradient);
+  stroke-width:5;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-dasharray:1150 80;
+  stroke-dashoffset:0;
+  filter:url(#quickEcgGlow);
+  animation:quickEcgFlow 4.2s linear infinite;
+}
+.quick-ecg-shadow{
+  fill:none;
+  stroke:#79e8df;
+  stroke-width:14;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  opacity:.12;
+  filter:blur(12px);
+  animation:quickEcgFlow 6.5s linear infinite reverse;
+}
+.quick-ecg-pulse{
+  filter:drop-shadow(0 0 12px #fff);
+  animation:ecgDotPulse 1.3s ease-in-out infinite;
+}
+.quick-ecg-scan{
+  fill:url(#quickEcgGradient);
+  opacity:.06;
+  filter:blur(10px);
+  animation:quickEcgScan 4.2s linear infinite;
+}
+.quick-ecg-label{
+  position:absolute;
+  left:2.5%;
+  top:3px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  color:#8f949c;
+  font-size:9px;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+  z-index:3;
+}
+.quick-ecg-label b{
+  color:#d9dce1;
+  font-weight:650;
+}
+@keyframes quickEcgFlow{
+  from{stroke-dashoffset:0}
+  to{stroke-dashoffset:-1230}
+}
+@keyframes quickEcgScan{
+  from{transform:translateX(-120px)}
+  to{transform:translateX(1600px)}
+}
+@keyframes ecgDotPulse{
+  0%,100%{opacity:.55;r:6}
+  50%{opacity:1;r:9}
+}
+
+/* Keep the separate ECG behind the cards */
+.quick-tab{
+  z-index:4;
+}
+.quick-ecg{
+  mix-blend-mode:screen;
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .quick-tabs{min-height:930px}
+  .quick-ecg{
+    top:54%;
+    height:270px;
+    left:-8%;
+    right:-8%;
+    opacity:.48;
+  }
+  .quick-ecg-label{left:10%}
+}
+@media(max-width:650px){
+  .quick-tabs{min-height:950px}
+  .quick-ecg{
+    top:57%;
+    height:210px;
+    left:-22%;
+    right:-22%;
+    opacity:.35;
+  }
+  .quick-ecg-label{font-size:7px}
+}
+@media(prefers-reduced-motion:reduce){
+  .quick-tabs.is-visible .quick-tab,
+  .quick-ecg-line,.quick-ecg-shadow,.quick-ecg-scan,
+  .quick-ecg-pulse{
+    animation:none!important;
+  }
+}
+
+</style>
+</head>
+<body>
+<header class="nav">
+<a class="logo" href="#home">Dr Deepta<span>Majumder</span></a>
+<nav class="navlinks"><a href="#research">Research</a><a href="#research-projects">Research Projects</a><a href="#experience">Experience</a><a href="#publications">Publications</a><a href="#volunteer">Volunteer</a><a href="#radio">Amateur Radio</a><a href="https://www.researchgate.net/profile/Deepta-Majumder" target="_blank" rel="noopener">ResearchGate</a><a href="#contact">Contact</a></nav>
+</header>
+<main id="home">
+<section class="hero">
+<div class="hero-orb"></div>
+<div class="blackhole-float" aria-hidden="true">
+  <div class="blackhole-caption">COSMIC SIGNAL</div>
+  <div class="blackhole">
+    <span class="bh-orbit bh-orbit-1"></span>
+    <span class="bh-orbit bh-orbit-2"></span>
+    <span class="bh-core"></span>
+    <span class="bh-photon"></span>
+    <span class="bh-particle p1"></span>
+    <span class="bh-particle p2"></span>
+    <span class="bh-particle p3"></span>
+  </div>
+</div>
+<div class="medical-glass-scene" aria-hidden="true">
+
+    <div class="medical-glass-label"><b>ECG signal</b><span>Rhythm · evidence · time</span></div>
+  </div>
+</div>
+
+<div class="hero-content">
+<div class="kicker">Physician · MPH Epidemiology · Public Health Researcher</div>
+<h1>Evidence<br/>People<br/>Impact</h1>
+<p class="hero-copy">Dr Deepta Majumder is a physician and public health researcher working across infectious diseases, harm reduction, cardiovascular health, cancer prevention and health inequalities in Bangladesh</p>
+<div class="meta">MBBS · University of Dhaka   |   MPH · Bangladesh Open University</div>
+
+<div class="hero-toggle-row">
+<label class="power-toggle" for="aiToggle">
+<input id="aiToggle" type="checkbox" aria-label="Toggle AI assistant">
+<span class="toggle-track"><span class="toggle-state">OFF</span><span class="toggle-thumb"></span></span>
+<span class="toggle-copy"><b>AI assistant</b><small>Ask anything about the portfolio</small></span>
+</label>
+</div>
+<div class="scroll-hint">Scroll to explore</div>
+</div>
+</section>
+<section aria-label="Quick navigation" class="quick-tabs" id="explore">
+<div class="quick-ecg" aria-hidden="true">
+  <div class="quick-ecg-label">
+    <span>02 · SIGNAL</span>
+    <b>ECG / LIVE EVIDENCE</b>
+  </div>
+  <svg viewBox="0 0 1500 330" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="quickEcgGradient" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#79e8df"/>
+        <stop offset=".28" stop-color="#719bff"/>
+        <stop offset=".55" stop-color="#ffffff"/>
+        <stop offset=".78" stop-color="#f58ab8"/>
+        <stop offset="1" stop-color="#ffcf5a"/>
+      </linearGradient>
+      <filter id="quickEcgGlow">
+        <feGaussianBlur stdDeviation="7" result="blur"/>
+        <feMerge>
+          <feMergeNode in="blur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+    </defs>
+    <g class="quick-ecg-grid">
+      <path d="M0 165H1500"/>
+      <path d="M0 82H1500"/>
+      <path d="M0 248H1500"/>
+      <path d="M150 0V330M300 0V330M450 0V330M600 0V330M750 0V330M900 0V330M1050 0V330M1200 0V330M1350 0V330"/>
+    </g>
+    <path class="quick-ecg-shadow"
+      d="M0 165 H145 L170 165 L190 148 L208 184 L227 162 L245 165 H395 L420 165 L440 165 L466 82 L488 255 L512 145 L536 165 H685 L710 165 L730 158 L752 174 L774 165 H925 L950 165 L970 165 L996 103 L1018 225 L1040 165 H1190 L1215 165 L1235 150 L1255 181 L1275 165 H1500"/>
+    <path class="quick-ecg-line"
+      d="M0 165 H145 L170 165 L190 148 L208 184 L227 162 L245 165 H395 L420 165 L440 165 L466 82 L488 255 L512 145 L536 165 H685 L710 165 L730 158 L752 174 L774 165 H925 L950 165 L970 165 L996 103 L1018 225 L1040 165 H1190 L1215 165 L1235 150 L1255 181 L1275 165 H1500"/>
+    <circle class="quick-ecg-pulse" r="7" fill="#fff">
+      <animateMotion dur="3.4s" repeatCount="indefinite"
+        path="M0 165 H145 L170 165 L190 148 L208 184 L227 162 L245 165 H395 L420 165 L440 165 L466 82 L488 255 L512 145 L536 165 H685 L710 165 L730 158 L752 174 L774 165 H925 L950 165 L970 165 L996 103 L1018 225 L1040 165 H1190 L1215 165 L1235 150 L1255 181 L1275 165 H1500"/>
+    </circle>
+    <rect class="quick-ecg-scan" x="-90" y="0" width="90" height="330" rx="45"/>
+  </svg>
+</div>
+
+<div class="wrap quick-tabs-wrap">
+<div class="tab-intro">
+<div class="section-kicker">All to explore</div>
+<h2>Move through the work</h2>
+<p>A layered view of the research, publications, projects and the AI assistant behind this portfolio</p>
+</div>
+<div class="tab-deck" id="tabDeck">
+<a class="quick-tab qt1" href="#research" aria-label="Explore research">
+<div class="tab-label"><div class="mini">01 · Explore</div><h3>Research</h3></div>
+<div class="arrow">↗</div>
+</a>
+<a class="quick-tab qt2" href="#publications" aria-label="Read publications">
+<div class="tab-label"><div class="mini">02 · Read</div><h3>Publications</h3></div>
+<div class="arrow">↗</div>
+</a>
+<a class="quick-tab qt3" href="#research-projects" aria-label="Discover research projects">
+<div class="tab-label"><div class="mini">03 · Discover</div><h3>Projects</h3></div>
+<div class="arrow">↗</div>
+</a>
+<button class="quick-tab qt4" id="openChat" type="button" aria-label="Open AI assistant">
+<div class="tab-label"><div class="mini">04 · AI</div><h3>Ask anything</h3></div>
+<div class="arrow">✦</div>
+</button>
+</div>
+</div>
+</section>
+
+<section class="daily-dashboard" id="daily-dashboard">
+  <div class="dashboard-ecg-bg" aria-hidden="true">
+    <svg viewBox="0 0 1200 260" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="dashboardEcgGradient" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#79e8df"/>
+          <stop offset=".42" stop-color="#719bff"/>
+          <stop offset=".72" stop-color="#f58ab8"/>
+          <stop offset="1" stop-color="#ffcf5a"/>
+        </linearGradient>
+      </defs>
+      <path class="ecg-bg-grid" d="M0 130H1200 M0 65H1200 M0 195H1200"/>
+      <path class="ecg-bg-line-soft" d="M0 132 H100 L122 132 L138 124 L151 139 L164 130 H265 L282 130 L298 129 L314 126 L326 130 H440 L456 130 L470 121 L484 141 L498 130 H610 L630 130 L646 129 L660 124 L672 130 H790 L808 130 L823 116 L837 145 L851 130 H960 L978 130 L993 125 L1007 138 L1021 130 H1200"/>
+      <path class="ecg-bg-line" d="M0 130 H100 L122 130 L138 119 L151 143 L164 128 H265 L282 128 L298 127 L314 120 L326 130 H440 L456 130 L470 112 L484 149 L498 130 H610 L630 130 L646 127 L660 117 L672 130 H790 L808 130 L823 106 L837 153 L851 130 H960 L978 130 L993 119 L1007 143 L1021 130 H1200"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div class="dashboard-head">
+      <div>
+        <div class="section-kicker">03 · Live daily dashboard</div>
+        <h2>Today<br>in focus</h2>
+      </div>
+      <p>Time weather daylight sunrise and lunar conditions presented as a compact colourful glass interface</p>
+    </div>
+
+    <div class="dashboard-grid" id="dashboardGrid">
+      <article class="live-card clock-card">
+        <div class="card-kicker"><span>Local time</span><span class="card-dot"></span></div>
+        <div class="clock-time" id="liveClock">--:--</div>
+        <div class="clock-zone">Dhaka · Bangladesh Standard Time</div>
+        <div class="clock-date" id="liveDate">Loading date</div>
+        <div class="clock-orbit"><div class="clock-sweep"></div></div>
+        <div class="live-updated">LIVE</div>
+      </article>
+
+      <article class="live-card weather-card">
+        <div class="card-kicker"><span>Weather</span><span class="card-dot"></span></div>
+        <div class="weather-icon"><div class="weather-sun"></div><div class="weather-cloud"></div></div>
+        <div class="weather-location">Dhaka · Bangladesh</div>
+        <div class="weather-temp" id="weatherTemp">--°</div>
+        <div class="weather-status" id="weatherStatus">Loading conditions</div>
+      </article>
+
+      <article class="live-card metric-card">
+        <div class="card-kicker"><span>Humidity</span><span class="card-dot"></span></div>
+        <div class="metric-big" id="humidityValue">--<small>%</small></div>
+        <div class="metric-sub">Relative humidity</div>
+        <div class="mini-wave">
+          <svg viewBox="0 0 500 100" preserveAspectRatio="none">
+            <path d="M0 70 C55 58 68 26 112 43 S178 88 220 56 S285 14 325 48 S395 86 430 50 S470 25 500 38"/>
+          </svg>
+        </div>
+      </article>
+
+      <article class="live-card atm-card">
+        <div class="card-kicker"><span>Atmosphere · ATM</span><span class="card-dot"></span></div>
+        <div class="metric-big" id="pressureAtm">--<small> atm</small></div>
+        <div class="metric-sub"><span id="pressureHpa">-- hPa</span> · surface pressure</div>
+        <div class="atm-ring"></div>
+      </article>
+
+      <article class="live-card daylight-card">
+        <div class="card-kicker"><span>Daylight</span><span class="card-dot"></span></div>
+        <div class="daylight-times"><span id="sunriseTime">Sunrise --</span><span id="sunsetTime">Sunset --</span></div>
+        <div class="daylight-bar" id="daylightBar"></div>
+        <div class="daylight-label"><span>Morning</span><span id="daylightNow">Day progress</span><span>Evening</span></div>
+      </article>
+
+      <article class="live-card sunrise-card">
+        <div class="card-kicker"><span>Sunrise</span><span class="card-dot"></span></div>
+        <div class="sunrise-visual" aria-hidden="true">
+          <div class="sunrise-rays"></div>
+          <div class="sunrise-sun"></div>
+          <div class="sunrise-horizon"></div>
+        </div>
+        <div class="astro-time" id="sunriseBig">--:--</div>
+        <div class="astro-sub" id="sunriseCountdown">Calculating sunrise</div>
+      </article>
+
+      <article class="live-card moon-card">
+        <div class="card-kicker"><span>Moon condition</span><span class="card-dot"></span></div>
+        <div class="moon-visual" aria-hidden="true">
+          <div class="moon-orb">
+            <span class="moon-shadow" id="moonShadow"></span>
+            <span class="moon-crater crater-a"></span>
+            <span class="moon-crater crater-b"></span>
+            <span class="moon-crater crater-c"></span>
+          </div>
+        </div>
+        <div class="astro-time moon-name" id="moonName">Loading moon</div>
+        <div class="astro-sub" id="moonMeta">--% illumination</div>
+      </article>
+
+      
+
+      
+    </div>
+  </div>
+</section>
+
+<section class="story" id="story">
+<div class="sticky">
+<div class="story-stage">
+<div class="story-bg"></div><div class="story-device"></div>
+<div class="story-center">
+<div class="portrait-card">
+<img alt="Dr. Deepta Majumder" src="assets/deepta-portrait.png"/>
+<div class="portrait-label"><b>Dr Deepta Majumder</b><small>MBBS · MPH Epidemiology · Public Health Researcher</small></div>
+</div>
+<div class="float-card fc1"><div class="label">Clinical + public health</div><b>Physician</b><span>Evidence-informed patient care</span></div>
+<div class="float-card fc2"><div class="label">Current programme</div><b>Harm reduction</b><span>HIV · OST · PWID</span></div>
+<div class="float-card fc3"><div class="label">Research training</div><b>Epidemiology</b><span>Biostatistics · research methods</span></div>
+<div class="float-card fc4"><div class="label">Research output</div><b>7+ articles</b><span>Published / indexed work listed in CV</span></div>
+</div>
+<div class="story-copy">
+<div class="step s1"><div class="eyebrow">01 · Clinical foundation</div><h2>Start with people</h2><p>Medical training and clinical work provided the foundation for understanding how disease, treatment and health systems affect patients in practice</p></div>
+<div class="step s2"><div class="eyebrow">02 · Community reality</div><h2>Look beyond the clinic</h2><p>Harm-reduction work with people who use drugs and people living with HIV exposed the importance of stigma, prevention, access and continuity of care</p></div>
+<div class="step s3"><div class="eyebrow">03 · Research</div><h2>Turn questions into evidence</h2><p>My research experience spans protocol development, data collection, data cleaning, coding, statistical analysis, literature synthesis and scientific writing</p></div>
+<div class="step s4"><div class="eyebrow">04 · Public health</div><h2>Evidence should move</h2><p>The goal is practical: strengthen programmes, inform policy and improve health outcomes in resource-constrained settings</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="research">
+<div class="wrap">
+<div class="section-kicker">01 · Research interests</div>
+<h2 class="section-title">A research agenda grounded in public health practice</h2>
+<p class="section-lead">The portfolio reflects the areas represented across my clinical, programme and research experience</p>
+<div class="grid">
+<article class="card" style="--glow:#79e8df"><div class="num">01</div><h3>HIV, HCV &amp; infectious diseases</h3><p>HIV prevention and treatment, hepatitis B/C, TB, co-infection management and health services for key populations</p></article>
+<article class="card" style="--glow:#f58ab8"><div class="num">02</div><h3>Substance use &amp; harm reduction</h3><p>Opioid substitution therapy, overdose management, safer injecting, stigma reduction and treatment engagement</p></article>
+<article class="card" style="--glow:#719bff"><div class="num">03</div><h3>Cardiovascular health</h3><p>Heart failure, pulmonary hypertension, iron deficiency, lipid target achievement and cardiovascular outcomes</p></article>
+<article class="card" style="--glow:#b88cff"><div class="num">04</div><h3>Cancer prevention</h3><p>HPV vaccination, vaccine hesitancy and public-health communication around cancer prevention</p></article>
+<article class="card" style="--glow:#ef8b57"><div class="num">05</div><h3>Nutrition &amp; population health</h3><p>Dietary diversity, nutritional status and health outcomes among vulnerable populations</p></article>
+<article class="card" style="--glow:#79e8df"><div class="num">06</div><h3>Health equity &amp; implementation</h3><p>Access, service delivery, community engagement and translation of evidence into practical public-health action</p></article>
+</div>
+</div>
+
+</section>
+<section class="research-projects" id="research-projects">
+<div class="wrap">
+<div class="section-kicker">04 · Research Projects</div>
+<h2 class="section-title">Research Projects</h2>
+<p class="section-lead">Selected ongoing and completed research projects spanning disaster health gender based violence immunisation mental health climate related health and emergency care</p>
+<div class="research-project-grid">
+
+<article class="research-project-card" style="--project-glow:#f58ab8">
+<div class="project-index">01 · Ongoing</div>
+<div class="role-badge">Principal Investigator</div>
+<h3>Gender-Based Violence Against Women Following Flooding In Bangladesh</h3>
+<div class="project-meta">
+<div class="project-meta-item"><span>Implemented by</span><b>Population Services and Training Center PSTC</b></div>
+<div class="project-meta-item"><span>Project period</span><b>1 December 2025 — present</b></div>
+</div>
+<p class="project-description">This study examines women’s experiences of gender based violence in flood affected communities in Bangladesh and explores how displacement and disruption to essential services may shape women’s safety and their ability to seek support The study aims to inform disaster preparedness and response efforts that improve protection and access to support for survivors</p>
+</article>
+
+<article class="research-project-card" style="--project-glow:#719bff">
+<div class="project-index">02 · Ongoing</div>
+<div class="role-badge">Principal Investigator</div>
+<h3>Disruption Of Essential Medicines And Chronic Disease Care After Cyclones In Coastal Bangladesh</h3>
+<div class="project-meta">
+<div class="project-meta-item"><span>Start date</span><b>1 February 2026</b></div>
+<div class="project-meta-item"><span>Focus</span><b>Chronic disease continuity of care</b></div>
+</div>
+<p class="project-description">This project examines how cyclones disrupt access to essential medicines and routine care for people living with chronic conditions such as hypertension diabetes and asthma in coastal Bangladesh The study explores how flooding displacement transport barriers and disruptions to local health services affect patients’ ability to refill prescriptions and attend follow up visits The project aims to inform cyclone preparedness and recovery plans that help patients continue treatment during and after emergencies</p>
+</article>
+
+<article class="research-project-card" style="--project-glow:#79e8df">
+<div class="project-index">03 · Completed</div>
+<div class="role-badge">Co Investigator</div>
+<h3>Parental Knowledge And Attitudes Toward Childhood Immunisation In Dhaka’s Urban Slums</h3>
+<div class="project-meta">
+<div class="project-meta-item"><span>Implemented by</span><b>Bangladesh Open University</b></div>
+<div class="project-meta-item"><span>Project period</span><b>1 May 2025 — 1 June 2026</b></div>
+</div>
+<p class="project-description">This study assessed what parents in Dhaka’s urban slums knew about routine childhood immunisation and how they felt about vaccinating their children The study aimed to identify gaps in parents’ understanding of recommended vaccines and vaccination schedules as well as concerns that could influence their decisions to inform communication with families in these communities</p>
+</article>
+
+<article class="research-project-card" style="--project-glow:#b88cff">
+<div class="project-index">04 · Completed</div>
+<div class="role-badge">Co Investigator</div>
+<h3>Patterns Of Deliberate Self-Harm And Their Association With Suicidal Ideation Among Adolescents</h3>
+<div class="project-meta">
+<div class="project-meta-item"><span>Implemented by</span><b>Bangabandhu Sheikh Mujib Medical University BSMMU</b></div>
+<div class="project-meta-item"><span>Project period</span><b>February 2022 — January 2024</b></div>
+</div>
+<p class="project-description">This study characterised patterns of deliberate self harm among adolescents and examined how those patterns were associated with suicidal ideation The study aimed to inform clinical assessment and guide timely mental health support for adolescents who self harm</p>
+</article>
+
+<article class="research-project-card" style="--project-glow:#ef8b57">
+<div class="project-index">05 · 2026</div>
+<div class="role-badge">Co Investigator</div>
+<h3>Climate Anxiety And Psychological Distress Among Medical Students In Bangladesh: Prevalence And Associated Factors</h3>
+<div class="project-meta">
+<div class="project-meta-item"><span>Implemented by</span><b>Mugdha Medical College</b></div>
+<div class="project-meta-item"><span>Project period</span><b>February — November 2026</b></div>
+</div>
+<p class="project-description">This study aimed to estimate the prevalence of climate anxiety and psychological distress among medical students in Bangladesh identify factors associated with each outcome and examine the relationship between the two The study was designed to inform student mental health support and guide how medical colleges address climate related concerns in student wellbeing programmes</p>
+</article>
+
+<article class="research-project-card" style="--project-glow:#fff338">
+<div class="project-index">06 · Ongoing</div>
+<div class="role-badge">Principal Investigator</div>
+<h3>Prevalence And Correlates Of Post-Traumatic Stress Disorder Among Students In Dhaka Following The July 2024 Mass Revolt</h3>
+<div class="project-meta">
+<div class="project-meta-item"><span>Implemented by</span><b>Mugdha Medical College</b></div>
+<div class="project-meta-item"><span>Project period</span><b>May 2025 — present</b></div>
+</div>
+<p class="project-description">This cross sectional study aims to estimate the prevalence of post traumatic stress disorder among students in Dhaka following Bangladesh’s July 2024 mass revolt and examine associated demographic social and psychological factors The study aims to inform mental health screening and support for students affected by political unrest</p>
+</article>
+
+
+<article class="research-project-card" style="--project-glow:#ffcf5a">
+<div class="project-index">07 · Ongoing</div>
+<div class="role-badge">Co Investigator</div>
+<h3>Measles Risk Factors And Vaccination Status Among Hospitalised Children During An Outbreak In Bangladesh: A Retrospective Study</h3>
+<div class="project-meta">
+<div class="project-meta-item"><span>Implemented by</span><b>Shaheed Suhrawardy Medical College Hospital ShSMCH</b></div>
+<div class="project-meta-item"><span>Project period</span><b>1 April 2026 — present</b></div>
+</div>
+<p class="project-description">This retrospective study examines measles vaccination status and potential risk factors among children admitted with measles to a designated tertiary care hospital in Bangladesh during an outbreak The study aims to document gaps in vaccination among admitted children and inform immunisation outreach and outbreak response</p>
+</article>
+
+</div>
+</div>
+</section>
+<section class="projects" id="projects">
+
+<div class="wrap">
+<div class="section-kicker">05 · Research experience</div>
+<h2 class="section-title">Questions I have worked to answer</h2>
+<div class="project-stack">
+<article class="project"><div class="number">01 · DENGUE · MOLECULAR EPIDEMIOLOGY</div><h3>Clinico-demographic profile of patients infected with dengue</h3><p>A cross-sectional study examining clinical and demographic characteristics with KAP analysis and molecular characterisation of dengue virus strains Responsibilities included protocol writing, data collection, RNA-to-cDNA conversion and amplification for molecular analysis</p><div class="pills"><span class="pill">Cross-sectional study</span><span class="pill">RT-PCR</span><span class="pill">Molecular characterisation</span></div></article>
+<article class="project"><div class="number">02 · CARDIOVASCULAR HEALTH</div><h3>Frequency of iron deficiency in heart failure patients</h3><p>A tertiary-hospital study assessing iron deficiency and associated factors I contributed to statistical analysis using SPSS and discussion writing under supervision</p><div class="pills"><span class="pill">Heart failure</span><span class="pill">Logistic regression</span><span class="pill">SPSS</span></div></article>
+<article class="project"><div class="number">03 · DIABETES · NEUROPATHIC PAIN</div><h3>Prevalence and risk factors of neuropathic pain in type 2 diabetes</h3><p>An observational study using the DN4 questionnaire and medical records to assess neuropathic symptoms and clinical and biochemical risk factors Responsibilities included participant enrolment, data collection, clinical evaluation, statistical analysis, literature review and discussion writing</p><div class="pills"><span class="pill">Observational research</span><span class="pill">DN4</span><span class="pill">SPSS</span></div></article>
+<article class="project"><div class="number">04 · HARM REDUCTION · IMPLEMENTATION</div><h3>HIV and opioid-substitution services for people who use drugs</h3><p>Programme implementation across CDIC settings, including HIV/STI/HBV/HCV/TB screening, OST, needle-syringe exchange, condom distribution, overdose management, peer outreach, staff training and coordination with government, law enforcement and NGOs</p><div class="pills"><span class="pill">Harm reduction</span><span class="pill">OST</span><span class="pill">HIV prevention</span><span class="pill">Service delivery</span></div></article>
+</div>
+</div>
+</section>
+<section class="timeline" id="experience">
+<div class="wrap">
+<div class="section-kicker">06 · Professional experience</div>
+<h2 class="section-title">From clinical medicine to public health research</h2>
+<div class="timeline-list">
+<article class="item"><div class="year">JAN 2025 — ONGOING</div><div><h3>Senior Medical Officer · Population Services and Training Center, Bangladesh</h3><p>GFPWID, funded by The Global Fund Supervision of a 19-person team, CDIC operations, HIV/OST training, outreach monitoring, service quality, TB/HIV/STI/HBV/HCV testing, harm-reduction implementation and programme reporting</p></div></article>
+<article class="item"><div class="year">SEP — DEC 2024</div><div><h3>Senior Technical Officer · CARE Bangladesh</h3><p>GFPWID, funded by The Global Fund Capacity building, HIV/OST services, peer outreach monitoring, enrolment of 35 people into OST, case management and community prevention</p></div></article>
+<article class="item"><div class="year">JUN — AUG 2024</div><div><h3>Senior Technical Officer · Ashokta Punarbashan Sangstha</h3><p>GFPWID, funded by The Global Fund Peer meetings, health education, family orientation, stigma reduction, safer injecting and clinical management of HIV, STIs, TB and injection-related problems</p></div></article>
+<article class="item"><div class="year">MAR 2023 — MAY 2024</div><div><h3>Research Assistant · Bangabandhu Sheikh Mujib Medical University, University Cardiac Center</h3><p>Protocol writing, conceptualisation, data cleansing, coding, analysis, data visualisation and scientific presentation in cardiovascular research</p></div></article>
+<article class="item"><div class="year">JAN 2021 — FEB 2023</div><div><h3>Medical Officer · Kohinur Nursing Home &amp; Diagnostic Center</h3><p>Clinical service management, duty-roster coordination, infection-prevention quality reviews, staff training, CME activities and resource allocation</p></div></article>
+</div>
+</div>
+</section>
+<section class="section" id="education">
+<div class="wrap">
+<div class="section-kicker">07 · Education</div>
+<h2 class="section-title">Medical training + epidemiology</h2>
+<div class="grid">
+<article class="card" style="--glow:#79e8df"><div class="num">2014 — 2019</div><h3>MBBS · University of Dhaka</h3><p>Basic medical sciences, biomedical sciences and public health, and clinical medicine</p></article>
+<article class="card" style="--glow:#719bff"><div class="num">2022 — 2025</div><h3>MPH · Bangladesh Open University</h3><p>Epidemiology, biostatistics, research methodology, communicable and non-communicable disease control, health policy, management, informatics, economics and public health nutrition</p></article>
+<article class="card" style="--glow:#f58ab8"><div class="num">MPH thesis</div><h3>Heart failure across Bangladesh</h3><p>Comparative study of clinical, demographic and biochemical features in heart-failure patients with reduced ejection fraction from southern and northern zones of Bangladesh</p></article>
+<article class="card" style="--glow:#f5c85f"><div class="num">CAPSTONE PROJECT</div><h3>Newcomer Settlement Orientation Program</h3><p>Developed an implementation and evaluation framework to help Bangladeshi newcomers navigate healthcare, education, language, banking, housing and digital services through multilingual online and community-based orientation, with pre/post assessment of knowledge and confidence</p></article>
+</div>
+</div>
+</section>
+<section class="section" id="leadership">
+<div class="wrap">
+<div class="section-kicker">08 · Leadership &amp; community</div>
+<h2 class="section-title">Research is also a community practice</h2>
+<p class="section-lead">The CV documents sustained involvement in public-health advocacy, disaster communication, volunteer response and community education</p>
+<div class="timeline-list">
+<article class="item"><div class="year">MAR 2016 — ONGOING</div><div><h3>Platform Doctors Foundation · Volunteer; Vice President since 2023</h3><p>Public-health advocacy, healthcare access and patient rights; strategic initiatives, stakeholder engagement, awareness campaigns and cross-organisational training</p></div></article>
+<article class="item"><div class="year">MAY 2019 — ONGOING</div><div><h3>Amateur Radio Society Bangladesh · Member</h3><p>Emergency HF/VHF/UHF communication during three crisis volunteer missions; volunteer training, antenna seminars and STEM outreach including schoolchildren's communication with the International Space Station</p></div></article>
+<article class="item"><div class="year">COVID-19 RESPONSE</div><div><h3>Technical Assistant · COVID-19 Integrated Coordination Center, DGHS</h3><p>Translated WHO guidance into accessible public-health materials, supported Bangladesh-adapted COVID-19 guidance, supervised volunteer communication work and conducted social-media fact checking</p></div></article>
+<article class="item"><div class="year">2016</div><div><h3>Flood-response medical and relief team · Sirajganj</h3><p>Coordinated emergency medical and relief support for more than 300 affected people, including basic medical care, water-purification tablets and reproductive-health-related supplies</p></div></article>
+</div>
+</div>
+</section>
+<section class="volunteer-feature" id="volunteer">
+<div class="wrap">
+<div class="section-kicker">09 · Volunteer &amp; community service</div>
+<h2 class="section-title">Service beyond the clinic</h2>
+<p class="section-lead">Volunteering has been a continuous part of my work — from public-health advocacy and community education to disaster response emergency communication and support for underserved communities</p>
+
+<div class="volunteer-org-grid">
+<article class="volunteer-org-card" style="--volunteer-glow:#79e8df">
+<div class="volunteer-org-top"><span>VICE PRESIDENT · 2023 — PRESENT</span><i></i></div>
+<h3>Platform Doctors Foundation</h3>
+<p>Public-health advocacy and community service focused on healthcare access patient rights awareness and practical support for underserved communities</p>
+<div class="volunteer-tags"><span>Health advocacy</span><span>Community outreach</span><span>Leadership</span></div>
+</article>
+
+<article class="volunteer-org-card" style="--volunteer-glow:#f5c85f">
+<div class="volunteer-org-top"><span>COMMUNITY INITIATIVE</span><i></i></div>
+<h3>CRIDA</h3>
+<p>Contributed to the Newcomer Settlement Orientation Program developing practical approaches to help Bangladeshi newcomers navigate healthcare education language banking housing and digital services</p>
+<div class="volunteer-tags"><span>Settlement support</span><span>Community engagement</span><span>Evaluation</span></div>
+</article>
+
+<article class="volunteer-org-card" style="--volunteer-glow:#719bff">
+<div class="volunteer-org-top"><span>AMATEUR RADIO SOCIETY BANGLADESH</span><i></i></div>
+<h3>ARSB · Emergency Communication</h3>
+<p>Volunteer amateur-radio activities supporting emergency communication training field operations and disaster response when conventional communication networks are disrupted</p>
+<div class="volunteer-tags"><span>Emergency communication</span><span>Disaster response</span><span>Technical service</span></div>
+</article>
+</div>
+
+<div class="volunteer-story">
+<div class="volunteer-story-head">
+<div class="section-kicker">Selected volunteer work</div>
+<h3>From floods to public-health emergencies</h3>
+</div>
+<div class="volunteer-timeline">
+<article><span>2016</span><div><b>Sirajganj Flood Response</b><p>Formed a team of doctors students and volunteers to provide urgent medical care relief support and essential supplies to flood-affected communities</p></div></article>
+<article><span>2020</span><div><b>COVID-19 Public-Health Response</b><p>Led communication work supporting awareness campaigns against misinformation through short films posters fact-checking and accessible public-health messaging</p></div></article>
+<article><span>2024</span><div><b>Feni Flood Emergency Response</b><p>Helped establish an emergency amateur-radio communication system and medical camp with the Bangladesh Army when local communication networks failed</p></div></article>
+<article><span>Ongoing</span><div><b>Community Health &amp; Humanitarian Volunteering</b><p>Participated in medical and relief camps refugee-community health activities health education reproductive-health awareness and support for vulnerable communities</p></div></article>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="grants">
+<div class="wrap">
+<div class="section-kicker">10 · Grants &amp; awards</div>
+<h2 class="section-title">Research support and recognition</h2>
+<div class="grid">
+<article class="card" style="--glow:#79e8df"><div class="num">2026</div><h3>Bangladesh Medical Research Council Grant</h3><p>Research on the clinico-demographic profile of dengue patients and molecular characterisation of the virus Ref: BMRC/Revenue/Research Grant/2026/646(01-168)</p></article>
+<article class="card" style="--glow:#719bff"><div class="num">2023 — 2024</div><h3>University Research Grant · BSMMU</h3><p>Co-investigator on a clinico-etiological study of pulmonary hypertension at Bangabandhu Sheikh Mujib Medical University</p></article>
+<article class="card" style="--glow:#f58ab8"><div class="num">2011 — 2016</div><h3>Merit scholarships</h3><p>Merit scholarships for outstanding SSC and HSC results, including tuition support and monthly stipends</p></article>
+</div>
+</div>
+</section>
+<section class="section" id="publications">
+<div class="wrap">
+<div class="section-kicker">11 · Academic publications</div>
+<h2 class="section-title">Selected research outputs</h2>
+<div class="pub-grid">
+<article class="pub"><div class="journal">BMC Palliative Care · 2025</div><h3>Choices and challenges in end-of-life care and decision-making: a nationwide cross-sectional study in Bangladesh</h3><p>DOI: <a href="https://doi.org/10.1186/s12904-025-01926-9" target="_blank">DOI</a></p></article>
+<article class="pub"><div class="journal">BSMMU Journal · 2025</div><h3>Clinical profile of patients with pulmonary hypertension</h3><p>DOI: <a href="https://doi.org/10.3329/bsmmuj.v18i3.81512" target="_blank">DOI</a></p></article>
+<article class="pub"><div class="journal">American Heart Journal Plus · 2026</div><h3>Cardiology research and practice article</h3><p>DOI: <a href="https://doi.org/10.1016/j.ahjo.2026.100725" target="_blank">DOI</a></p></article>
+<article class="pub"><div class="journal">Cureus · 2026</div><h3>Comparison of Short-Term Outcomes of Tetralogy of Fallot Repair Between Preserved Pulmonary Valve Annulus and Transannular Patch</h3><p>DOI: <a href="https://doi.org/10.7759/cureus.106176" target="_blank">DOI</a></p></article>
+<article class="pub"><div class="journal">Musculoskeletal Care · 2026</div><h3>Musculoskeletal Complications Among Stroke Survivors in Dhaka: Prevalence, Patterns, and Associated Factors</h3><p>DOI: <a href="https://doi.org/10.1002/msc.70230" target="_blank">DOI</a></p></article>
+<article class="pub"><div class="journal">Bangladesh Journal of Medicine · 2026</div><h3>Lipid Target Achievement After Percutaneous Coronary Intervention: A Multicentre Study from Bangladesh</h3><p>Published July 2026</p></article>
+<article class="pub"><div class="journal">Journal of Pediatric Urology · 2026</div><h3>Global pediatric kidney replacement therapy</h3><p>DOI: <a href="https://doi.org/10.1016/j.jpurol.2026.106183" target="_blank">DOI</a></p></article>
+</div>
+</div>
+</section>
+<section class="section" id="conferences">
+<div class="wrap">
+<div class="section-kicker">12 · Conference research</div>
+<h2 class="section-title">Research beyond the manuscript</h2>
+<div class="project-stack">
+<article class="project"><div class="number">GANUD INTERNATIONAL CONFERENCE · ISTANBUL</div><h3>Three research presentations in nutrition and cardiovascular health</h3><p>Association Between Dietary Diversity and Cardiovascular Disease Risk Assessment Among Rohingya Refugees in Bangladesh; Impact of Nutritional Status on Outcomes of Patients with Acute Coronary Syndrome; and a comparative study of clinical, demographic and biochemical features in heart failure with reduced ejection fraction</p></article>
+<article class="project"><div class="number">ISPEC 14TH INTERNATIONAL CONFERENCE</div><h3>Cardiorenal syndrome following CABG</h3><p>Association of preoperative N-terminal pro B-type natriuretic peptide and cardiorenal syndrome following off-pump coronary artery bypass grafting surgery</p></article>
+<article class="project"><div class="number">APHA 2026 · ACCEPTED ABSTRACT</div><h3>Adrenocortical function among people living with HIV on antiretroviral therapy in Bangladesh</h3><p>Accepted for poster presentation at the APHA 2026 Annual Meeting and Expo in San Antonio, Texas</p></article>
+</div>
+</div>
+</section>
+<section class="radio-feature" id="radio">
+<div class="wrap">
+<div class="section-kicker">13 · Amateur radio</div>
+<h2 class="section-title">Technical curiosity with a public service purpose</h2>
+<p class="section-lead">My amateur radio journey connects electronics communication field problem solving and humanitarian service — a technical pursuit that became another way to serve communities when conventional communication systems fail</p>
+<div class="radio-profile">
+<img alt="Dr Deepta Majumder S21HK ARSB member photo" src="https://members.s21arsb.com/index.php?id=16&amp;page=call-sign-photo&amp;source=member"/>
+<div><b>S21HK · Dr Deepta Majumder</b><span>Licensed amateur radio operator since 2017 · Active contributor to ARSB since 2019</span></div>
+</div>
+<div class="radio-hero radio-hero-single">
+<figure class="radio-photo radio-photo-large">
+<img alt="Dr Deepta Majumder operating an amateur radio station" src="assets/hk-amateur-radio.webp"/>
+<figcaption class="radio-caption">
+<div class="mini">S21HK · Amateur radio</div>
+<h3>Communication beyond the internet</h3>
+<p>Amateur radio combines technical experimentation communication and public service when conventional networks are unavailable</p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="radio-story">
+<div class="radio-story-grid">
+<div>
+<div class="section-kicker">The S21HK story</div>
+<h3>HAM radio → emergency communication → public service</h3>
+<p>The Amateur Radio Society of Bangladesh profile highlights my work as S21HK and describes my involvement in emergency communication volunteer training technical outreach and youth engagement</p>
+<p>Since 2017 I have been a licensed amateur radio operator and since 2019 an active contributor to ARSB with experience across HF VHF and UHF field communication</p>
+<p>Through ARSB and ham radio activities I have supported crisis response communication assisted rescue and relief coordination and trained volunteers in effective field communication</p>
+<a class="radio-link" href="https://s21arsb.com/2026/07/25/ham-to-international-research-recognition-s21hk/" rel="noopener" target="_blank">Read the ARSB feature ↗</a>
+<div class="radio-source">Profile source · Amateur Radio Society of Bangladesh · 25 July 2026</div>
+<div class="radio-source">Personal amateur radio photograph supplied for this portfolio</div>
+</div>
+
+<div class="flood-response-card">
+  <div class="section-kicker">2024 · Feni Flood Response</div>
+  <h3>The 2024 Floods Of Bangladesh: A Story Of Hope And Ham Radio</h3>
+  <p class="flood-lead">When rapidly rising floodwaters isolated communities in Feni and disrupted electricity mobile networks and food supply systems our amateur radio network became an emergency communication link for rescue teams</p>
+  <div class="flood-grid">
+    <div><b>375+</b><span>rescue missions facilitated by the team</span></div>
+    <div><b>70 km</b><span>communication radius connecting rescue units and the control room</span></div>
+    <div><b>S21HK</b><span>Dr Deepta Majumder joined with medical students to extend the network</span></div>
+    <div><b>Medical camp</b><span>temporary medical support established with the emergency response</span></div>
+  </div>
+  <p class="flood-detail">The response included establishing emergency communication stations linking Dhaka and Feni using portable and base radios antennas and a Yagi antenna for longer-distance communication The team worked with Bangladesh Scouts Red Crescent volunteers doctors engineers university students and the Bangladesh Army to maintain communication between field teams and the Feni control room</p>
+  <a class="radio-link" href="assets/qst-2026-the-2024-floods-of-bangladesh.pdf" target="_blank" rel="noopener">Read the QST feature ↗</a>
+  <div class="radio-source">Source: QST · March 2026 · “The 2024 Floods of Bangladesh: A Story of Hope and Ham Radio”</div>
+</div>
+
+<div class="radio-stats">
+<div class="radio-stat"><b>2017</b><span>Licensed amateur radio operator</span></div>
+<div class="radio-stat"><b>2019</b><span>Active ARSB contributor</span></div>
+<div class="radio-stat"><b>HF</b><span>High frequency communication</span></div>
+<div class="radio-stat"><b>VHF · UHF</b><span>Local and field communication</span></div>
+<div class="radio-stat"><b>Emergency</b><span>Crisis response communication</span></div>
+<div class="radio-stat"><b>STEM</b><span>Technical and youth outreach</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="speaking">
+<div class="wrap">
+<div class="section-kicker">14 · Invited speaking</div>
+<h2 class="section-title">Sharing research beyond the manuscript</h2>
+<div class="timeline-list">
+<article class="item"><div class="year">20 NOV 2026</div><div><h3>Invited Speaker · Bangladesh International Cancer Congress BICC 2026</h3><p><strong>Session:</strong> Breakthrough Research–5 · <strong>Topic:</strong> Human Papillomavirus Vaccine Hesitancy Among Female University Students in Bangladesh: The Role of Knowledge Trust and Academic Background · <strong>Time:</strong> 5:00 PM–6:30 PM · <strong>Duration:</strong> 8 minutes · <strong>Venue:</strong> Hall-3 Radisson Blu Water Garden Hotel Dhaka Bangladesh</p></div></article>
+</div>
+</div>
+</section>
+<section class="contact" id="contact">
+<div class="wrap"><div class="contact-box">
+<div class="section-kicker">15 · Contact</div>
+<h2>Let's build evidence that matters</h2>
+<p class="section-lead">For research collaboration, public-health projects, academic opportunities and scientific communication</p>
+<a class="btn white" href="mailto:deeptamajumder94@gmail.com">Email me</a>
+<a class="btn" href="https://orcid.org/0009-0009-5897-4645" rel="noopener" target="_blank">ORCID</a>
+</div></div>
+
+<a class="contact-link researchgate-link" href="https://www.researchgate.net/profile/Deepta-Majumder" target="_blank" rel="noopener">
+  <span class="contact-link-label">ResearchGate</span>
+  <span class="contact-link-arrow">↗</span>
+</a>
+</section>
+<button aria-label="Open AI assistant" class="ai-float" id="openChatFloat" type="button">
+<span>Ask anything</span><span class="ai-note">AI assistant</span><span class="ai-dot">✦</span>
+</button>
+<!-- Embedded general-purpose AI assistant -->
+<div aria-hidden="true" class="chat-overlay" id="chatOverlay">
+<section aria-labelledby="chatTitle" aria-modal="true" class="chat-panel" role="dialog">
+<header class="chat-head">
+<div class="chat-brand">
+<div class="chat-orb"></div>
+<div><b id="chatTitle">AI Assistant</b><span>Ask a general question</span></div>
+</div>
+<button aria-label="Close" class="chat-close" id="chatClose" type="button">×</button>
+</header>
+<div class="chat-messages" id="chatMessages">
+<div class="chat-msg ai">Hi — I’m the AI assistant on Dr Deepta Majumder’s portfolio Ask me a general question, or ask about the research, publications and experience shown on this website</div>
+</div>
+<div class="chat-suggestions">
+<button class="chat-suggestion" type="button">What is epidemiology?</button>
+<button class="chat-suggestion" type="button">Explain harm reduction</button>
+<button class="chat-suggestion" type="button">What is RDS?</button>
+</div>
+<form class="chat-form" id="chatForm">
+<textarea aria-label="Message" class="chat-input" id="chatInput" placeholder="Ask anything…" rows="1"></textarea>
+<button aria-label="Send" class="chat-send" id="chatSend" type="submit">↑</button>
+</form>
+<div class="chat-disclaimer">AI-generated answers may be inaccurate For medical or other high-stakes questions, verify with an appropriate professional or authoritative source</div>
+</section>
+</div>
+</main>
+<footer><div class="wrap">© Dr Deepta Majumder · MBBS · MPH Epidemiology · Bangladesh</div></footer>
+<script>
+(function(){
+ const overlay=document.getElementById('chatOverlay');
+ const openBtns=[document.getElementById('openChat'),document.getElementById('openChatFloat')].filter(Boolean);
+ const closeBtn=document.getElementById('chatClose');
+ const form=document.getElementById('chatForm');
+ const input=document.getElementById('chatInput');
+ const messages=document.getElementById('chatMessages');
+ const send=document.getElementById('chatSend');
+ const suggestions=[...document.querySelectorAll('.chat-suggestion')];
+ let history=[];
+
+ function openChat(){
+   overlay.classList.add('open');
+   overlay.setAttribute('aria-hidden','false');
+   setTimeout(()=>input.focus(),120);
+ }
+ function closeChat(){
+   overlay.classList.remove('open');
+   overlay.setAttribute('aria-hidden','true');
+ }
+ function addMessage(text,role){
+   const el=document.createElement('div');
+   el.className='chat-msg '+role;
+   el.textContent=text;
+   messages.appendChild(el);
+   messages.scrollTop=messages.scrollHeight;
+   return el;
+ }
+ function addTyping(){
+   const el=document.createElement('div');
+   el.className='chat-msg ai typing';
+   el.innerHTML='<span class="typing-dots"><i></i><i></i><i></i></span>';
+   messages.appendChild(el);
+   messages.scrollTop=messages.scrollHeight;
+   return el;
+ }
+ async function sendMessage(text){
+   text=text.trim();
+   if(!text || send.disabled)return;
+   addMessage(text,'user');
+   history.push({role:'user',content:text});
+   input.value='';
+   send.disabled=true;
+   const typing=addTyping();
+   try{
+     const res=await fetch('/api/chat',{
+       method:'POST',
+       headers:{'Content-Type':'application/json'},
+       body:JSON.stringify({messages:history.slice(-12)})
+     });
+     const data=await res.json();
+     typing.remove();
+     if(!res.ok) throw new Error(data.error||'The AI assistant could not respond.');
+     const answer=(data.answer||'').trim()||'I’m sorry, I could not generate an answer.';
+     addMessage(answer,'ai');
+     history.push({role:'assistant',content:answer});
+   }catch(err){
+     typing.remove();
+     addMessage('I could not connect to the AI assistant. Please try again in a moment.', 'ai');
+     console.error(err);
+   }finally{
+     send.disabled=false;
+     input.focus();
+   }
+ }
+ openBtns.forEach(b=>b.addEventListener('click',openChat));
+ closeBtn.addEventListener('click',closeChat);
+ overlay.addEventListener('click',e=>{if(e.target===overlay)closeChat()});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape' && overlay.classList.contains('open'))closeChat()});
+ form.addEventListener('submit',e=>{e.preventDefault();sendMessage(input.value)});
+ suggestions.forEach(b=>b.addEventListener('click',()=>sendMessage(b.textContent)));
+ input.addEventListener('keydown',e=>{
+   if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();form.requestSubmit();}
+ });
+})();
+</script>
+<script>
+(function(){
+ const story=document.querySelector('.story');
+ const portrait=document.querySelector('.portrait-card');
+ const cards=[...document.querySelectorAll('.float-card')];
+ const steps=[...document.querySelectorAll('.story-copy .step')];
+ const bg=document.querySelector('.story-bg');
+ const orb=document.querySelector('.story-device');
+ function clamp(x,a=0,b=1){return Math.max(a,Math.min(b,x))}
+ function ease(x){return x*x*(3-2*x)}
+ function render(){
+   const rect=story.getBoundingClientRect();
+   const travel=story.offsetHeight-innerHeight;
+   const p=clamp(-rect.top/travel);
+   const e=ease(p);
+   portrait.style.transform=`scale(${.82+e*.30})`;
+   portrait.style.opacity=clamp((p-.02)*5,0,1);
+   cards.forEach((c,i)=>{
+     const offsets=[[-120,-30],[120,-5],[-90,35],[90,45]];
+     const [x,y]=offsets[i];
+     const reveal=clamp((p-(.10+i*.06))/.17,0,1), rr=ease(reveal);
+     c.style.opacity=rr;
+     c.style.transform=`translate(${x*(1-rr)}px,${y*(1-rr)}px) scale(${.88+.12*rr})`;
+   });
+   orb.style.transform=`scale(${.72+e*.58}) rotate(${p*12}deg)`;
+   bg.style.setProperty('--gx',`${35+p*35}%`);
+   bg.style.setProperty('--gy',`${25+p*45}%`);
+   bg.style.setProperty('--gc',p<.5?'#79e8df':'#f58ab8');
+   steps.forEach((s,i)=>{
+     const local=clamp(1-Math.abs((p-(i+.5)/4)*7),0,1);
+     s.style.opacity=local;
+     s.style.transform=`translateY(${(1-local)*28}px)`;
+   });
+   requestAnimationFrame(render);
+ }
+ requestAnimationFrame(render);
+})();
+</script>
+
+<script>
+(function(){
+ const section=document.querySelector('.quick-tabs');
+ const deck=document.getElementById('tabDeck');
+ if(!section||!deck)return;
+
+ const reveal=new IntersectionObserver((entries)=>{
+   entries.forEach(entry=>{
+     if(entry.isIntersecting){
+       section.classList.add('is-visible');
+     }
+   });
+ },{threshold:.18});
+ reveal.observe(section);
+
+ let raf=0;
+ deck.addEventListener('pointermove',(event)=>{
+   const rect=deck.getBoundingClientRect();
+   const x=((event.clientX-rect.left)/rect.width-.5)*34;
+   const y=((event.clientY-rect.top)/rect.height-.5)*25;
+   cancelAnimationFrame(raf);
+   raf=requestAnimationFrame(()=>{
+     section.classList.add('is-active');
+     deck.querySelectorAll('.quick-tab').forEach((card,i)=>{
+       const factors=[.55,.82,.66,1.0];
+       const f=factors[i]||.7;
+       card.style.setProperty('--mx',(x*f).toFixed(2)+'px');
+       card.style.setProperty('--my',(y*f).toFixed(2)+'px');
+     });
+   });
+ });
+ deck.addEventListener('pointerleave',()=>{
+   section.classList.remove('is-active');
+   deck.querySelectorAll('.quick-tab').forEach(card=>{
+     card.style.setProperty('--mx','0px');
+     card.style.setProperty('--my','0px');
+   });
+   setTimeout(()=>section.classList.remove('is-active'),120);
+ });
+})();
+</script>
+
+
+<script>
+(function(){
+ const toggle=document.getElementById('aiToggle');
+ const openChat=document.getElementById('openChat');
+ const closeChat=document.getElementById('chatClose');
+ const overlay=document.getElementById('chatOverlay');
+ if(!toggle)return;
+
+ toggle.addEventListener('change',function(){
+   if(this.checked){
+     if(openChat) openChat.click();
+   }else{
+     if(closeChat) closeChat.click();
+   }
+ });
+
+ if(overlay){
+   const sync=()=>{
+     if(overlay.classList.contains('open')){
+       toggle.checked=true;
+     }
+   };
+   const observer=new MutationObserver(sync);
+   observer.observe(overlay,{attributes:true,attributeFilter:['class']});
+ }
+})();
+</script>
+
+
+<script>
+(function(){
+ const hero=document.querySelector('.hero');
+ if(!hero)return;
+ requestAnimationFrame(()=>setTimeout(()=>hero.classList.add('is-ready'),180));
+})();
+</script>
+
+
+<script>
+(function(){
+  const clock = document.getElementById('liveClock');
+  const date = document.getElementById('liveDate');
+  const temp = document.getElementById('weatherTemp');
+  const status = document.getElementById('weatherStatus');
+  const humidity = document.getElementById('humidityValue');
+  const pressureAtm = document.getElementById('pressureAtm');
+  const pressureHpa = document.getElementById('pressureHpa');
+  const sunrise = document.getElementById('sunriseTime');
+  const sunset = document.getElementById('sunsetTime');
+  const daylightBar = document.getElementById('daylightBar');
+  const daylightNow = document.getElementById('daylightNow');
+  const sunriseBig = document.getElementById('sunriseBig');
+  const sunriseCountdown = document.getElementById('sunriseCountdown');
+  const moonName = document.getElementById('moonName');
+  const moonMeta = document.getElementById('moonMeta');
+  const moonShadow = document.getElementById('moonShadow');
+  const dashboard = document.getElementById('daily-dashboard');
+  if(!clock || !dashboard) return;
+
+  const tz = 'Asia/Dhaka';
+  const fmtTime = new Intl.DateTimeFormat('en-GB',{
+    timeZone:tz,hour:'2-digit',minute:'2-digit',hour12:false
+  });
+  const fmtDate = new Intl.DateTimeFormat('en-US',{
+    timeZone:tz,weekday:'long',month:'long',day:'numeric',year:'numeric'
+  });
+
+  function updateClock(){
+    const now = new Date();
+    clock.textContent = fmtTime.format(now);
+    date.textContent = fmtDate.format(now);
+  }
+  updateClock();
+  setInterval(updateClock,1000);
+
+  const weatherCode = {
+    0:'Clear sky',
+    1:'Mainly clear',
+    2:'Partly cloudy',
+    3:'Overcast',
+    45:'Fog',
+    48:'Rime fog',
+    51:'Light drizzle',
+    53:'Drizzle',
+    55:'Dense drizzle',
+    56:'Freezing drizzle',
+    57:'Heavy freezing drizzle',
+    61:'Light rain',
+    63:'Rain',
+    65:'Heavy rain',
+    66:'Freezing rain',
+    67:'Heavy freezing rain',
+    71:'Light snow',
+    73:'Snow',
+    75:'Heavy snow',
+    80:'Rain showers',
+    81:'Rain showers',
+    82:'Heavy rain showers',
+    95:'Thunderstorm',
+    96:'Thunderstorm with hail',
+    99:'Thunderstorm with hail'
+  };
+
+  function timeOnly(iso){
+    if(!iso) return '--';
+    return new Intl.DateTimeFormat('en-GB',{timeZone:tz,hour:'2-digit',minute:'2-digit',hour12:false}).format(new Date(iso));
+  }
+
+  function daylightProgress(sunriseIso,sunsetIso){
+    if(!sunriseIso || !sunsetIso) return;
+    const now = new Date();
+    const a = new Date(sunriseIso).getTime();
+    const b = new Date(sunsetIso).getTime();
+    const n = now.getTime();
+    const p = Math.max(0,Math.min(100,((n-a)/(b-a))*100));
+    daylightBar.style.setProperty('--day-progress',p+'%');
+    daylightNow.textContent = n<a ? 'Before sunrise' : n>b ? 'After sunset' : Math.round(p)+'% of daylight';
+  }
+
+
+  function updateSunriseWidget(sunriseIso){
+    if(!sunriseIso || !sunriseBig) return;
+    sunriseBig.textContent=timeOnly(sunriseIso);
+    const delta=new Date(sunriseIso).getTime()-Date.now();
+    if(delta>0){
+      const mins=Math.round(delta/60000);
+      const h=Math.floor(mins/60), m=mins%60;
+      sunriseCountdown.textContent=`in ${h}h ${String(m).padStart(2,'0')}m`;
+    }else{
+      sunriseCountdown.textContent='Sunrise today';
+    }
+  }
+
+  function updateMoon(){
+    if(!moonName || !moonShadow) return;
+    const now=new Date();
+    const knownNewMoon=Date.UTC(2000,0,6,18,14,0);
+    const synodic=29.530588853;
+    const days=(now.getTime()-knownNewMoon)/86400000;
+    const phase=((days%synodic)+synodic)%synodic/synodic;
+    const illumination=(1-Math.cos(2*Math.PI*phase))/2;
+    const pct=Math.round(illumination*100);
+
+    let name;
+    if(phase<.0625 || phase>=.9375) name='New moon';
+    else if(phase<.1875) name='Waxing crescent';
+    else if(phase<.3125) name='First quarter';
+    else if(phase<.4375) name='Waxing gibbous';
+    else if(phase<.5625) name='Full moon';
+    else if(phase<.6875) name='Waning gibbous';
+    else if(phase<.8125) name='Last quarter';
+    else name='Waning crescent';
+
+    let shadowX;
+    if(phase<=.5){
+      shadowX=-(phase/.5)*110;
+    }else{
+      shadowX=((1-phase)/.5)*110;
+    }
+
+    moonName.textContent=name;
+    moonMeta.textContent=`${pct}% illuminated · Dhaka`;
+    moonShadow.style.setProperty('--moon-shadow-x',shadowX+'%');
+  }
+  updateMoon();
+  setInterval(updateMoon,60000);
+
+  async function loadWeather(){
+    try{
+      const url='https://api.open-meteo.com/v1/forecast?latitude=23.8103&longitude=90.4125&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,surface_pressure,wind_speed_10m&daily=sunrise,sunset&timezone=Asia%2FDhaka&forecast_days=1';
+      const r=await fetch(url,{cache:'no-store'});
+      if(!r.ok) throw new Error('weather request failed');
+      const d=await r.json();
+      const c=d.current||{};
+      temp.textContent=Math.round(c.temperature_2m)+'°';
+      status.textContent=(weatherCode[c.weather_code]||'Current conditions')+' · feels '+Math.round(c.apparent_temperature)+'°';
+      humidity.innerHTML=Math.round(c.relative_humidity_2m)+'<small>%</small>';
+      const hpa=Number(c.surface_pressure);
+      pressureHpa.textContent=Math.round(hpa)+' hPa';
+      pressureAtm.innerHTML=(hpa/1013.25).toFixed(3)+'<small> atm</small>';
+      const sr=d.daily?.sunrise?.[0], ss=d.daily?.sunset?.[0];
+      sunrise.textContent='Sunrise '+timeOnly(sr);
+      sunset.textContent='Sunset '+timeOnly(ss);
+      updateSunriseWidget(sr);
+      daylightProgress(sr,ss);
+      setInterval(()=>daylightProgress(sr,ss),60000);
+    }catch(e){
+      temp.textContent='--°';
+      status.textContent='Weather unavailable';
+      humidity.innerHTML='--<small>%</small>';
+      pressureAtm.innerHTML='--<small> atm</small>';
+      pressureHpa.textContent='-- hPa';
+    }
+  }
+  loadWeather();
+
+  const reveal = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting) dashboard.classList.add('is-visible');
+    });
+  },{threshold:.12});
+  reveal.observe(dashboard);
+})();
+</script>
+
+</body>
+</html>

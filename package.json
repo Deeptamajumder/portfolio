@@ -1,0 +1,14 @@
+{
+  "name": "deepta-majumder-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Apple-inspired academic portfolio with an embedded OpenAI AI assistant.",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "openai": "^6.0.0"
+  }
+}
